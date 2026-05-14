@@ -50,7 +50,7 @@ public sealed class RedditScraperExtension : IScraperProvider
 
     public string Id => ExtensionId;
     public string Name => "Reddit Scraper";
-    public string Version => "1.0.0";
+    public string Version => OfficialDownloaderUtilities.GetExtensionVersion(typeof(RedditScraperExtension));
     public string? Description => "Extracts metadata from Reddit posts and Redgifs links.";
     public string? Author => "Cove Team";
     public string? Url => OfficialDownloaderUtilities.RepoUrl;

@@ -41,7 +41,7 @@ public sealed class YtDlpScraperExtension : IScraperProvider
 
     public string Id => ExtensionId;
     public string Name => "yt-dlp Scraper";
-    public string Version => "1.0.0";
+    public string Version => OfficialDownloaderUtilities.GetExtensionVersion(typeof(YtDlpScraperExtension));
     public string? Description => "Extracts scene metadata with yt-dlp.";
     public string? Author => "Cove Team";
     public string? Url => OfficialDownloaderUtilities.RepoUrl;

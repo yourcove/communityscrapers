@@ -22,7 +22,7 @@ public sealed class CommonAudioScraperExtension : IScraperProvider
 
     public string Id => ExtensionId;
     public string Name => "Common Audio Scraper";
-    public string Version => "1.0.0";
+    public string Version => OfficialDownloaderUtilities.GetExtensionVersion(typeof(CommonAudioScraperExtension));
     public string? Description => "Extracts audio metadata from common hosted-audio pages such as Soundgasm and Whyp.";
     public string? Author => "Cove Team";
     public string? Url => OfficialDownloaderUtilities.RepoUrl;

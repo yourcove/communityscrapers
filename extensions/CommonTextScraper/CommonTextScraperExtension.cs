@@ -23,7 +23,7 @@ public sealed class CommonTextScraperExtension : IScraperProvider
 
     public string Id => ExtensionId;
     public string Name => "Common Text Scraper";
-    public string Version => "1.0.0";
+    public string Version => OfficialDownloaderUtilities.GetExtensionVersion(typeof(CommonTextScraperExtension));
     public string? Description => "Extracts text metadata from common story sites. Currently supports Literotica.";
     public string? Author => "Cove Team";
     public string? Url => OfficialDownloaderUtilities.RepoUrl;
