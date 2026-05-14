@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/extensions/">
+    <Project Path="extensions/CommonAudioScraper/CommonAudioScraper.csproj" />
+    <Project Path="extensions/CommonTextScraper/CommonTextScraper.csproj" />
+    <Project Path="extensions/RedditScraper/RedditScraper.csproj" />
+    <Project Path="extensions/YtDlpScraper/YtDlpScraper.csproj" />
+  </Folder>
+</Solution>

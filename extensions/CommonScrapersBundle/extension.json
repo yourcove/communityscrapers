@@ -1,0 +1,18 @@
+{
+  "id": "cove.official.scrapers",
+  "name": "Common Scrapers Bundle",
+  "version": "1.0.0",
+  "description": "Bundle of Cove's common metadata scraper extensions.",
+  "author": "Cove Team",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "bundle",
+  "minCoveVersion": "0.0.16",
+  "categories": ["scraper", "metadata", "integration"],
+  "dependencies": {
+    "cove.official.scrapers.common-audio": ">=1.0.0",
+    "cove.official.scrapers.common-text": ">=1.0.0",
+    "cove.official.scrapers.reddit": ">=1.0.0",
+    "cove.official.scrapers.ytdlp": ">=1.0.0",
+    "cove.official.scrapers.yaml-video": ">=1.0.0"
+  }
+}

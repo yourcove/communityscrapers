@@ -1,0 +1,14 @@
+{
+  "id": "cove.official.scrapers.common-text",
+  "name": "Common Text Scraper",
+  "version": "1.0.0",
+  "description": "Extracts story metadata from common text sites. Currently supports Literotica.",
+  "author": "Cove Team",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "minCoveVersion": "0.0.16",
+  "entryDll": "CommonTextScraper.dll",
+  "categories": ["scraper", "metadata", "text"],
+  "permissions": {
+    "network": ["literotica.com", "*.literotica.com"]
+  }
+}

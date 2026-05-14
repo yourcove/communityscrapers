@@ -1,0 +1,35 @@
+{
+  "id": "cove.official.scrapers.ytdlp",
+  "name": "yt-dlp Scraper",
+  "version": "1.0.0",
+  "description": "Extracts scene metadata with yt-dlp.",
+  "author": "Cove Team",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "minCoveVersion": "0.0.16",
+  "entryDll": "YtDlpScraper.dll",
+  "categories": ["scraper", "metadata", "integration"],
+  "permissions": {
+    "network": ["*"],
+    "process": ["yt-dlp"]
+  },
+  "externalDependencies": [
+    {
+      "id": "yt-dlp",
+      "name": "yt-dlp",
+      "description": "Command line metadata extractor used for generic video sites.",
+      "optional": false,
+      "settingsKey": "ytDlpPath"
+    }
+  ],
+  "settings": [
+    {
+      "key": "ytDlpPath",
+      "label": "yt-dlp executable path",
+      "type": "string",
+      "defaultValue": "yt-dlp",
+      "description": "Path to yt-dlp, or yt-dlp when it is available on PATH.",
+      "scope": "extension",
+      "extensionIds": ["cove.official.scrapers.ytdlp"]
+    }
+  ]
+}

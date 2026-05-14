@@ -1,0 +1,14 @@
+{
+  "id": "cove.official.scrapers.reddit",
+  "name": "Reddit Scraper",
+  "version": "1.0.0",
+  "description": "Extracts metadata from Reddit posts and Redgifs links.",
+  "author": "Cove Team",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "minCoveVersion": "0.0.16",
+  "entryDll": "RedditScraper.dll",
+  "categories": ["scraper", "metadata", "integration"],
+  "permissions": {
+    "network": ["reddit.com", "*.reddit.com", "redd.it", "*.redd.it", "redgifs.com", "*.redgifs.com", "redgif.com", "*.redgif.com", "i.redd.it", "v.redd.it", "preview.redd.it", "media.redgifs.com"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.official.scrapers.yaml-video",
+  "name": "YAML Video Scrapers",
+  "version": "1.0.0",
+  "description": "Installable YAML metadata scrapers for video sites.",
+  "author": "Cove Team",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": ["scraper", "metadata", "video", "yaml-scraper"],
+  "permissions": {
+    "network": [
+      "pornhub.com",
+      "*.pornhub.com",
+      "pornhub.org",
+      "*.pornhub.org",
+      "xvideos.com",
+      "*.xvideos.com",
+      "xvideos.red",
+      "*.xvideos.red"
+    ]
+  }
+}

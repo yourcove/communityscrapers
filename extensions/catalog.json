@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "extensions": [
+    {
+      "name": "CommonScrapersBundle",
+      "id": "cove.official.scrapers",
+      "path": "extensions/CommonScrapersBundle",
+      "tagPrefix": "common/",
+      "manifestOnly": true
+    },
+    {
+      "name": "CommonAudioScraper",
+      "id": "cove.official.scrapers.common-audio",
+      "path": "extensions/CommonAudioScraper",
+      "tagPrefix": "common-audio/"
+    },
+    {
+      "name": "CommonTextScraper",
+      "id": "cove.official.scrapers.common-text",
+      "path": "extensions/CommonTextScraper",
+      "tagPrefix": "common-text/"
+    },
+    {
+      "name": "RedditScraper",
+      "id": "cove.official.scrapers.reddit",
+      "path": "extensions/RedditScraper",
+      "tagPrefix": "reddit/"
+    },
+    {
+      "name": "YtDlpScraper",
+      "id": "cove.official.scrapers.ytdlp",
+      "path": "extensions/YtDlpScraper",
+      "tagPrefix": "ytdlp/"
+    },
+    {
+      "name": "YamlVideoScrapers",
+      "id": "cove.official.scrapers.yaml-video",
+      "path": "extensions/YamlVideoScrapers",
+      "tagPrefix": "yaml-video/",
+      "manifestOnly": true,
+      "contentOnly": true
+    }
+  ]
+}
