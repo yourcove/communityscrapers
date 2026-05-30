@@ -5,10 +5,19 @@
   "description": "Extracts audio metadata from common hosted-audio pages such as Soundgasm and Whyp.",
   "author": "Cove Team",
   "url": "https://github.com/yourcove/communityscrapers",
-  "minCoveVersion": "0.0.16",
+  "minCoveVersion": "0.0.28",
   "entryDll": "CommonAudioScraper.dll",
-  "categories": ["scraper", "metadata", "audio"],
+  "categories": [
+    "scraper",
+    "metadata",
+    "audio"
+  ],
   "permissions": {
-    "network": ["soundgasm.net", "*.soundgasm.net", "whyp.it", "*.whyp.it"]
+    "network": [
+      "soundgasm.net",
+      "*.soundgasm.net",
+      "whyp.it",
+      "*.whyp.it"
+    ]
   }
 }

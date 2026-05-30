@@ -5,7 +5,7 @@
   "description": "YAML metadata scraper for H0930_C0930_H4610-JP.",
   "url": "https://github.com/yourcove/communityscrapers",
   "kind": "scraper-pack",
-  "minCoveVersion": "0.0.16",
+  "minCoveVersion": "0.0.28",
   "categories": [
     "scraper",
     "metadata",

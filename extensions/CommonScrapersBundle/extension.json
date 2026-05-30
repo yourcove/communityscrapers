@@ -6,8 +6,12 @@
   "author": "Cove Team",
   "url": "https://github.com/yourcove/communityscrapers",
   "kind": "bundle",
-  "minCoveVersion": "0.0.16",
-  "categories": ["scraper", "metadata", "integration"],
+  "minCoveVersion": "0.0.28",
+  "categories": [
+    "scraper",
+    "metadata",
+    "integration"
+  ],
   "dependencies": {
     "cove.community.scrapers.common-audio": ">=1.0.0",
     "cove.community.scrapers.common-text": ">=1.0.0",

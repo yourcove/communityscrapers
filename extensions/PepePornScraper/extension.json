@@ -4,9 +4,13 @@
   "version": "1.0.0",
   "description": "Extracts scene metadata from PepePorn pages.",
   "url": "https://github.com/yourcove/communityscrapers",
-  "minCoveVersion": "0.0.16",
+  "minCoveVersion": "0.0.28",
   "entryDll": "PepePornScraper.dll",
-  "categories": ["scraper", "metadata", "video"],
+  "categories": [
+    "scraper",
+    "metadata",
+    "video"
+  ],
   "permissions": {
     "network": [
       "pepeporn.com",

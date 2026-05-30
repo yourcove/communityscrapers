@@ -4,8 +4,18 @@
   "version": "1.0.0",
   "description": "Extracts scene, performer, gallery, and group metadata from Sean Cody pages.",
   "url": "https://github.com/yourcove/communityscrapers",
-  "minCoveVersion": "0.0.16",
+  "minCoveVersion": "0.0.28",
   "entryDll": "SeanCodyScraper.dll",
-  "categories": ["scraper", "metadata", "video"],
-  "permissions": { "network": ["seancody.com", "www.seancody.com", "site-api.project1service.com"] }
+  "categories": [
+    "scraper",
+    "metadata",
+    "video"
+  ],
+  "permissions": {
+    "network": [
+      "seancody.com",
+      "www.seancody.com",
+      "site-api.project1service.com"
+    ]
+  }
 }
