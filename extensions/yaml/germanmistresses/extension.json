@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.germanmistresses",
+  "name": "GermanMistresses",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for GermanMistresses.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/germanmistresses.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.germanmistresses.com",
+      "germanmistresses.com"
+    ]
+  }
+}

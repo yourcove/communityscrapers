@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.kin8tengoku",
+  "name": "Kin8tengoku",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Kin8tengoku.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/kin8tengoku.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.kin8tengoku.com",
+      "en.kin8tengoku.com",
+      "enasianmusume.kin8tengoku.com"
+    ]
+  }
+}

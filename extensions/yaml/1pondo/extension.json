@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.1pondo",
+  "name": "1Pondo",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for 1Pondo.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/1pondo.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.1pondo.tv",
+      "en.1pondo.tv"
+    ]
+  }
+}

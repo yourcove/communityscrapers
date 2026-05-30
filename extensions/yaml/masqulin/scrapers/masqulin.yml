@@ -1,0 +1,29 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/Masqulin.yml
+name: Masqulin
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - masqulin.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //div[@class="gallery_info spacer"]/h1
+      Performers:
+        Name: //span[@class="tour_update_models"]/a
+      Tags:
+        Name: //a[@class="tagsVideoPage"]
+      Details:
+        selector: //p[@id="textDesc"]
+      Image: //meta[@property="og:image"]/@content
+      Date:
+        selector: //span[@class='availdate'][1]
+        postProcess:
+          - parseDate: Jan 02, 2006
+      Studio:
+        Name:
+          fixed: Masqulin
+# Last Updated January 07, 2023

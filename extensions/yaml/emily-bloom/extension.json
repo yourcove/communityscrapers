@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.emily-bloom",
+  "name": "Emily Bloom",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Emily Bloom.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/emily-bloom.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.emilybloom.com",
+      "emilybloom.com"
+    ]
+  }
+}

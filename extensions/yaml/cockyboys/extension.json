@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.cockyboys",
+  "name": "CockyBoys",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for CockyBoys.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/cockyboys.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.cockyboys.com",
+      "cockyboys.com"
+    ]
+  }
+}

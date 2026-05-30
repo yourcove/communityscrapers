@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.french-twinks",
+  "name": "French Twinks",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for French Twinks.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/french-twinks.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.french-twinks.com",
+      "french-twinks.com"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.kinkbomb",
+  "name": "KinkBomb",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for KinkBomb.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/kinkbomb.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.kinkbomb.com",
+      "kinkbomb.com"
+    ]
+  }
+}

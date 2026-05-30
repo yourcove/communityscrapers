@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.swallowbay",
+  "name": "SwallowBay",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for SwallowBay.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/swallowbay.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.swallowbay.com",
+      "swallowbay.com"
+    ]
+  }
+}

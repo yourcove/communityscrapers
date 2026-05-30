@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.sensuallove-xxx",
+  "name": "sensuallove.xxx",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for sensuallove.xxx.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/sensuallove-xxx.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.sensuallove.xxx",
+      "sensuallove.xxx"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/FilthFlix.yml
+name: FilthFlix
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - filthflix.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //h2[@class="video__headline"]
+      Date:
+        selector: //strong[contains(text(),"Published:")]/following-sibling::text()
+        postProcess:
+          - parseDate: 02 Jan 2006
+      Performers:
+        Name: //p[@class="video__text"]//a[contains(@href,"/models/")]
+      Tags:
+        Name: //p[@class="video__text"]//a[contains(@href,"/movies/")]
+      Details:
+        selector: //p[@class="video__text"]/text()[1]
+      Image:
+        selector: //div[@class="video__player"]/img/@src
+      Studio:
+        Name:
+          selector: //div[@class="video__top__item"]/a/img/@alt
+# Last Updated July 22, 2021

@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.wake-up-n-fuck",
+  "name": "Wake Up n Fuck",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Wake Up n Fuck.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/wake-up-n-fuck.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.wakeupnfuck.com",
+      "wakeupnfuck.com",
+      "www.wakeupnfuck.com"
+    ]
+  }
+}

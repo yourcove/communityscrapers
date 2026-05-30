@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.famegirls",
+  "name": "famegirls",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for famegirls.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/famegirls.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.famegirls.net",
+      "famegirls.net"
+    ]
+  }
+}

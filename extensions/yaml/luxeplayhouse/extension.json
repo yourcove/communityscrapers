@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.luxeplayhouse",
+  "name": "luxeplayhouse",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for luxeplayhouse.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/luxeplayhouse.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.luxeplayhouse.com",
+      "luxeplayhouse.com"
+    ]
+  }
+}

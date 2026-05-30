@@ -1,0 +1,36 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/ThirdSexXXX.yml
+name: ThirdSexXXX
+
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - thirdsexxxx.com/trailers
+    scraper: sceneScraper
+
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //div[@class="memberPicV"]/h2
+      Image: //meta[@property="og:image"]/@content
+      Date:
+        selector: //div[@class="info"]/p[contains(., "Added")]
+        postProcess:
+          - replace:
+              - regex: "^Added: +(\\d+)/(\\d+)/(\\d+) .+$"
+                with: $3-$1-$2
+      Performers:
+        Name:
+          selector: //div[@class="info"]/p[contains(., "Starring")]/a
+          postProcess:
+            - replace:
+                - regex: ^[a-z]+\.\s*
+                  with: ""
+      Details: //div[@class="description"]/p
+      Tags:
+        Name: //div[contains(@class, "tags")]//a
+      Studio:
+        Name:
+          fixed: ThirdSexXXX
+# Last Updated October 04, 2022

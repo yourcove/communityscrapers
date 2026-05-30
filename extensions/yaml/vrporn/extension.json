@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.vrporn",
+  "name": "VRPorn",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for VRPorn.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/vrporn.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.vrporn.com",
+      "vrporn.com"
+    ]
+  }
+}

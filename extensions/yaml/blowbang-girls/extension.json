@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.blowbang-girls",
+  "name": "BlowBang Girls",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BlowBang Girls.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/blowbang-girls.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.blowbanggirls.com",
+      "blowbanggirls.com",
+      "www.blowbanggirls.com"
+    ]
+  }
+}

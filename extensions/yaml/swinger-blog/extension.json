@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.swinger-blog",
+  "name": "Swinger-Blog",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Swinger-Blog.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/swinger-blog.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.swinger-blog.xxx",
+      "swinger-blog.xxx"
+    ]
+  }
+}

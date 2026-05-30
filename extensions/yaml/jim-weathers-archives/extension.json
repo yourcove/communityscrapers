@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.jim-weathers-archives",
+  "name": "Jim Weathers Archives",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Jim Weathers Archives.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/jim-weathers-archives.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.jimweathersarchives.com",
+      "jimweathersarchives.com"
+    ]
+  }
+}

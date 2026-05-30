@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.bathroom-creepers",
+  "name": "Bathroom Creepers",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Bathroom Creepers.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/bathroom-creepers.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.bathroomcreepers.com",
+      "bathroomcreepers.com",
+      "www.bathroomcreepers.com"
+    ]
+  }
+}

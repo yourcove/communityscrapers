@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.dirtyflix",
+  "name": "DirtyFlix",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for DirtyFlix.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/dirtyflix.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.dirtyflix.com",
+      "members.dirtyflix.com"
+    ]
+  }
+}

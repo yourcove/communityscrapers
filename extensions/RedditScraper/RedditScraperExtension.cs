@@ -7,11 +7,11 @@ namespace Cove.Extensions.CommunityScrapers;
 
 public sealed class RedditScraperExtension : IScraperProvider
 {
-    private const string ExtensionId = "cove.official.scrapers.reddit";
-    private const string RedditImageScraperId = "cove.official.scrapers.reddit/scraper-image";
-    private const string RedditAudioScraperId = "cove.official.scrapers.reddit/scraper-audio";
-    private const string RedditSceneScraperId = "cove.official.scrapers.reddit/scraper-scene";
-    private const string RedgifsSceneScraperId = "cove.official.scrapers.reddit/redgifs-scraper-scene";
+    private const string ExtensionId = "cove.community.scrapers.reddit";
+    private const string RedditImageScraperId = "cove.community.scrapers.reddit/scraper-image";
+    private const string RedditAudioScraperId = "cove.community.scrapers.reddit/scraper-audio";
+    private const string RedditSceneScraperId = "cove.community.scrapers.reddit/scraper-scene";
+    private const string RedgifsSceneScraperId = "cove.community.scrapers.reddit/redgifs-scraper-scene";
     private static readonly string[] RedditUrlPatterns = ["reddit.com/*", "*.reddit.com/*", "redd.it/*", "*.redd.it/*"];
     private static readonly string[] RedgifsUrlPatterns = ["redgifs.com/*", "*.redgifs.com/*", "redgif.com/*", "*.redgif.com/*"];
     private IServiceProvider? _services;

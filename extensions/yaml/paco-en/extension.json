@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.paco-en",
+  "name": "Paco (EN)",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Paco (EN).",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/paco-en.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.pacopacomama.com",
+      "en.pacopacomama.com"
+    ]
+  }
+}

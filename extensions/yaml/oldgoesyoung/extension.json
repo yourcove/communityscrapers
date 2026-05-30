@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.oldgoesyoung",
+  "name": "OldGoesYoung",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for OldGoesYoung.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/oldgoesyoung.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.oldgoesyoung.com",
+      "*.spoiledvirgins.com",
+      "*.trickyoldteacher.com",
+      "*.younganaltryouts.com",
+      "oldgoesyoung.com",
+      "spoiledvirgins.com",
+      "trickyoldteacher.com",
+      "younganaltryouts.com"
+    ]
+  }
+}

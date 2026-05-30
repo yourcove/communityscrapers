@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.eporner",
+  "name": "Eporner",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Eporner.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/eporner.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.eporner.com",
+      "www.eporner.com"
+    ]
+  }
+}

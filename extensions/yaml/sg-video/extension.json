@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.sg-video",
+  "name": "SG Video",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for SG Video.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/sg-video.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.sg-video.com",
+      "sg-video.com"
+    ]
+  }
+}

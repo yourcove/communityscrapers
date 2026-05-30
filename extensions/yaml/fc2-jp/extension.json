@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.fc2-jp",
+  "name": "FC2-JP",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for FC2-JP.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/fc2-jp.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.fc2.com",
+      "adult.contents.fc2.com"
+    ]
+  }
+}

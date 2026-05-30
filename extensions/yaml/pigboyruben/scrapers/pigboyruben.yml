@@ -1,0 +1,36 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/PigBoyRuben.yml
+name: PigBoyRuben
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - pigboyruben.com
+    scraper: sceneScraper
+
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //div[@class='web']//div[@class='page']//div[@class='header']//h1
+      Details:
+        selector: //div[@class='web']//div[@class='containerBig']//div[@class='descr']
+        concat: " "
+      Performers:
+        Name:
+          selector: //div[@class='web']//div[@class='containerBig']//a[starts-with(@href, 'model')]
+        URLs:
+          selector: //div[@class='web']//div[@class='containerBig']//a[starts-with(@href, 'model')]/@href
+          postProcess:
+            - replace:
+                - regex: ^
+                  with: https://pigboyruben.com/
+      Image:
+        selector: //div[@class='web']//div[@class='clipifr']//img/@src
+        postProcess:
+          - replace:
+              - regex: ^
+                with: https://pigboyruben.com/
+      Studio:
+        Name:
+          fixed: Pigboy Ruben
+# Last Updated September 17, 2025

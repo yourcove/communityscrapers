@@ -1,0 +1,31 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/Hypnotube.yml
+name: Hypnotube
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - hypnotube.com/video/
+    scraper: sceneScraper
+
+xPathScrapers:
+  sceneScraper:
+    common:
+      $studio: //a[starts-with(@href,'https://hypnotube.com/user/')]
+    scene:
+      Title: //div[@class='item-tr-inner-col inner-col']/h1/text()
+      Details: //div[@class='main-description']/text()
+      Image: //meta[@property='og:image']/@content
+      Studio:
+        Name: $studio/@title
+        URL: $studio/@href
+      Date:
+        selector: //li/span[@class="icon i-calendar"]/following-sibling::span
+        postProcess:
+          - replace:
+              - regex: \s.*$
+                with: ""
+      Tags:
+        Name: //div[@class='tags-block']/a/text()
+      URL: //link[@rel='canonical']/@href
+# Last Updated April 29, 2023

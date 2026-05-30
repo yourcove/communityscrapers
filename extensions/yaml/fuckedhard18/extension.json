@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.fuckedhard18",
+  "name": "FuckedHard18",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for FuckedHard18.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/fuckedhard18.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.fuckedhard18.com",
+      "fuckedhard18.com"
+    ]
+  }
+}

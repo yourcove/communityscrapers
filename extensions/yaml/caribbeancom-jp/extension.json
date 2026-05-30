@@ -1,0 +1,27 @@
+{
+  "id": "cove.community.scrapers.yaml.caribbeancom-jp",
+  "name": "Caribbeancom-JP",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Caribbeancom-JP.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/caribbeancom-jp.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.caribbeancom.com",
+      "*.caribbeancompr.com",
+      "*.www.caribbeancom",
+      "www.caribbeancom",
+      "www.caribbeancom.com",
+      "www.caribbeancompr.com"
+    ]
+  }
+}

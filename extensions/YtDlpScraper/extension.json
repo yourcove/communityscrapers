@@ -1,5 +1,5 @@
 {
-  "id": "cove.official.scrapers.ytdlp",
+  "id": "cove.community.scrapers.ytdlp",
   "name": "yt-dlp Scraper",
   "version": "1.0.0",
   "description": "Extracts scene metadata with yt-dlp.",
@@ -27,7 +27,7 @@
       "displayName": "yt-dlp executable path",
       "type": "STRING",
       "description": "Path to yt-dlp, or yt-dlp when it is available on PATH.",
-      "extensionIds": ["cove.official.scrapers.ytdlp"]
+      "extensionIds": ["cove.community.scrapers.ytdlp"]
     }
   ]
 }

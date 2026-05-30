@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.taratainton-com",
+  "name": "TaraTainton.com",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for TaraTainton.com.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/taratainton-com.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.taratainton.com",
+      "www.taratainton.com"
+    ]
+  }
+}

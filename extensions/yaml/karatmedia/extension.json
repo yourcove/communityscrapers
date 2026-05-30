@@ -1,0 +1,61 @@
+{
+  "id": "cove.community.scrapers.yaml.karatmedia",
+  "name": "karatmedia",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for karatmedia.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/karatmedia.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.18tokyo.com",
+      "*.alljapanesepass.com",
+      "*.analnippon.com",
+      "*.bigtitstokyo.com",
+      "*.bukkakenow.com",
+      "*.idols69.com",
+      "*.japaneseflashers.com",
+      "*.japaneseslurp.com",
+      "*.jcosplay.com",
+      "*.jpmilfs.com",
+      "*.jpnurse.com",
+      "*.jpshavers.com",
+      "*.jpteacher.com",
+      "*.jschoolgirls.com",
+      "*.myracequeens.com",
+      "*.ocreampies.com",
+      "*.officesexjp.com",
+      "*.outdoorjp.com",
+      "*.povjp.com",
+      "*.tokyobang.com",
+      "18tokyo.com",
+      "alljapanesepass.com",
+      "analnippon.com",
+      "bigtitstokyo.com",
+      "bukkakenow.com",
+      "idols69.com",
+      "japaneseflashers.com",
+      "japaneseslurp.com",
+      "jcosplay.com",
+      "jpmilfs.com",
+      "jpnurse.com",
+      "jpshavers.com",
+      "jpteacher.com",
+      "jschoolgirls.com",
+      "myracequeens.com",
+      "ocreampies.com",
+      "officesexjp.com",
+      "outdoorjp.com",
+      "povjp.com",
+      "tokyobang.com"
+    ]
+  }
+}

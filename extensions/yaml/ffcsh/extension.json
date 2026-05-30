@@ -1,0 +1,57 @@
+{
+  "id": "cove.community.scrapers.yaml.ffcsh",
+  "name": "FFCSH",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for FFCSH.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/ffcsh.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.babearchives.com",
+      "*.balletflatsfetish.com",
+      "*.barbarafeet.com",
+      "*.blackph.com",
+      "*.cosplayfeet.com",
+      "*.dianafeet.com",
+      "*.emilyaddison.com",
+      "*.fantasyflipflop.com",
+      "*.filthyfemdom.com",
+      "*.footfetishbeauties.com",
+      "*.interracialpovs.com",
+      "*.nylonfeetlove.com",
+      "*.nylonup.com",
+      "*.passionepiedi.com",
+      "*.playwithrae.com",
+      "*.redpolishfeet.com",
+      "*.sweetcarla.com",
+      "*.transfeet.com",
+      "babearchives.com",
+      "balletflatsfetish.com",
+      "barbarafeet.com",
+      "blackph.com",
+      "cosplayfeet.com",
+      "dianafeet.com",
+      "emilyaddison.com",
+      "fantasyflipflop.com",
+      "filthyfemdom.com",
+      "footfetishbeauties.com",
+      "interracialpovs.com",
+      "nylonfeetlove.com",
+      "nylonup.com",
+      "playwithrae.com",
+      "redpolishfeet.com",
+      "sweetcarla.com",
+      "transfeet.com",
+      "valentina.passionepiedi.com"
+    ]
+  }
+}

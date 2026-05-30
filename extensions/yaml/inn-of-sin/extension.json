@@ -1,0 +1,41 @@
+{
+  "id": "cove.community.scrapers.yaml.inn-of-sin",
+  "name": "Inn of Sin",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Inn of Sin.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/inn-of-sin.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.adreenawinters.com",
+      "*.bbctitans.com",
+      "*.dannyoceansadventures.com",
+      "*.mydeepdarksecret.com",
+      "*.puerto-rock.com",
+      "*.rebelrhyder.com",
+      "*.richardmannsworld.com",
+      "*.tatsandtits.com",
+      "*.trans4thefans.com",
+      "*.wefuckin.com",
+      "adreenawinters.com",
+      "bbctitans.com",
+      "dannyoceansadventures.com",
+      "mydeepdarksecret.com",
+      "puerto-rock.com",
+      "rebelrhyder.com",
+      "richardmannsworld.com",
+      "tatsandtits.com",
+      "trans4thefans.com",
+      "wefuckin.com"
+    ]
+  }
+}

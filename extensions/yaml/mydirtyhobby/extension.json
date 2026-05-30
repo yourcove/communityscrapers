@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.mydirtyhobby",
+  "name": "MyDirtyHobby",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MyDirtyHobby.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/mydirtyhobby.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.mydirtyhobby.com",
+      "*.mydirtyhobby.de",
+      "mydirtyhobby.com",
+      "mydirtyhobby.de"
+    ]
+  }
+}

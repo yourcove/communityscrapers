@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.danni",
+  "name": "Danni",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Danni.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/danni.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.danni.com",
+      "danni.com"
+    ]
+  }
+}

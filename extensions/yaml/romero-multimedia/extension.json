@@ -1,0 +1,49 @@
+{
+  "id": "cove.community.scrapers.yaml.romero-multimedia",
+  "name": "Romero Multimedia",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Romero Multimedia.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/romero-multimedia.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.cumflation.com",
+      "*.defeated.xxx",
+      "*.defeatedsexfight.com",
+      "*.freeze.xxx",
+      "*.futanari.xxx",
+      "*.hentaied.com",
+      "*.monsterporn.com",
+      "*.parasited.com",
+      "*.plantsvscunts.com",
+      "*.smokinghawt.com",
+      "*.somegore.com",
+      "*.vampired.com",
+      "*.voodooed.com",
+      "*.vored.com",
+      "cumflation.com",
+      "defeated.xxx",
+      "defeatedsexfight.com",
+      "freeze.xxx",
+      "futanari.xxx",
+      "hentaied.com",
+      "monsterporn.com",
+      "parasited.com",
+      "plantsvscunts.com",
+      "smokinghawt.com",
+      "somegore.com",
+      "vampired.com",
+      "voodooed.com",
+      "vored.com"
+    ]
+  }
+}

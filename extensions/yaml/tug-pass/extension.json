@@ -1,0 +1,59 @@
+{
+  "id": "cove.community.scrapers.yaml.tug-pass",
+  "name": "Tug Pass",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Tug Pass.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/tug-pass.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.breedme.com",
+      "*.clubtug.com",
+      "*.cumblastcity.com",
+      "*.edgequeens.com",
+      "*.familylust.com",
+      "*.finishhim.com",
+      "*.jawbreakerz.com",
+      "*.meanmassage.com",
+      "*.milfaf.com",
+      "*.mylked.com",
+      "*.nookies.com",
+      "*.over40handjobs.com",
+      "*.petite18.com",
+      "*.seemomsuck.com",
+      "*.shadyspa.com",
+      "*.shereacts.com",
+      "*.teasepov.com",
+      "*.teentugs.com",
+      "*.tugpass.com",
+      "breedme.com",
+      "clubtug.com",
+      "cumblastcity.com",
+      "edgequeens.com",
+      "familylust.com",
+      "finishhim.com",
+      "jawbreakerz.com",
+      "meanmassage.com",
+      "milfaf.com",
+      "mylked.com",
+      "nookies.com",
+      "over40handjobs.com",
+      "petite18.com",
+      "seemomsuck.com",
+      "shadyspa.com",
+      "shereacts.com",
+      "teasepov.com",
+      "teentugs.com",
+      "tugpass.com"
+    ]
+  }
+}

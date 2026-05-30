@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.xes-pl",
+  "name": "xes.pl",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for xes.pl.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/xes-pl.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.xes.pl",
+      "xes.pl"
+    ]
+  }
+}

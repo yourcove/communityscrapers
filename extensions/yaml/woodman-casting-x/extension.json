@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.woodman-casting-x",
+  "name": "Woodman Casting X",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Woodman Casting X.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/woodman-casting-x.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.woodmancastingx.com",
+      "woodmancastingx.com",
+      "www.woodmancastingx.com"
+    ]
+  }
+}

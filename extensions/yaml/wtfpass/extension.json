@@ -1,0 +1,49 @@
+{
+  "id": "cove.community.scrapers.yaml.wtfpass",
+  "name": "wtfpass",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for wtfpass.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/wtfpass.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.collegefuckparties.com",
+      "*.dollsporn.com",
+      "*.hardfuckgirls.com",
+      "*.hdmassageporn.com",
+      "*.hdsex18.com",
+      "*.hersexdebut.com",
+      "*.meetsuckandfuck.com",
+      "*.pandafuck.com",
+      "*.pickupfuck.com",
+      "*.pornweekends.com",
+      "*.privatesextapes.com",
+      "*.publicsexadventures.com",
+      "*.theartporn.com",
+      "*.wtfpass.com",
+      "collegefuckparties.com",
+      "dollsporn.com",
+      "hardfuckgirls.com",
+      "hdmassageporn.com",
+      "hdsex18.com",
+      "hersexdebut.com",
+      "meetsuckandfuck.com",
+      "pandafuck.com",
+      "pickupfuck.com",
+      "pornweekends.com",
+      "privatesextapes.com",
+      "publicsexadventures.com",
+      "theartporn.com",
+      "wtfpass.com"
+    ]
+  }
+}

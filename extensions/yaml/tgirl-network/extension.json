@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.tgirl-network",
+  "name": "TGirl-Network",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for TGirl-Network.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/tgirl-network.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.tgirl-network.com",
+      "*.ts-baileyjay.com",
+      "tgirl-network.com",
+      "ts-baileyjay.com"
+    ]
+  }
+}

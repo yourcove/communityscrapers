@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.heydouga-jp",
+  "name": "Heydouga-JP",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Heydouga-JP.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/heydouga-jp.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.heydouga.com",
+      "www.heydouga.com"
+    ]
+  }
+}

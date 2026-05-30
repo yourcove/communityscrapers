@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.olbmedia",
+  "name": "OLBMedia",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for OLBMedia.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/olbmedia.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.houseofangell.com",
+      "*.hungyoungbrit.com",
+      "*.musclebearporn.com",
+      "*.rawroadnation.com",
+      "houseofangell.com",
+      "hungyoungbrit.com",
+      "musclebearporn.com",
+      "rawroadnation.com"
+    ]
+  }
+}

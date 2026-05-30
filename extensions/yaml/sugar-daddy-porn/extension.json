@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.sugar-daddy-porn",
+  "name": "Sugar Daddy Porn",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Sugar Daddy Porn.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/sugar-daddy-porn.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.hotguysfuck.com",
+      "*.sugardaddyporn.com",
+      "api.hotguysfuck.com",
+      "sugardaddyporn.com"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.richardnailder",
+  "name": "RichardNailder",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for RichardNailder.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/richardnailder.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.bringmeyoursister.com",
+      "*.glassmannequin.com",
+      "*.realcoloradogirls.com",
+      "*.richardnailder.com",
+      "bringmeyoursister.com",
+      "glassmannequin.com",
+      "realcoloradogirls.com",
+      "richardnailder.com"
+    ]
+  }
+}

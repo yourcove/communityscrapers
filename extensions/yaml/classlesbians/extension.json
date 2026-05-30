@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.classlesbians",
+  "name": "ClassLesbians",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for ClassLesbians.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/classlesbians.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.class-lesbians.com",
+      "class-lesbians.com"
+    ]
+  }
+}

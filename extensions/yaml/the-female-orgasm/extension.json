@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.the-female-orgasm",
+  "name": "The-Female-Orgasm",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for The-Female-Orgasm.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/the-female-orgasm.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.the-female-orgasm.com",
+      "the-female-orgasm.com"
+    ]
+  }
+}

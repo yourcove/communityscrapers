@@ -1,0 +1,27 @@
+{
+  "id": "cove.community.scrapers.yaml.madhotx",
+  "name": "MadhotX",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MadhotX.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/madhotx.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.madgloryholes.com",
+      "*.madhotx.com",
+      "*.madmasseur.com",
+      "madgloryholes.com",
+      "madhotx.com",
+      "madmasseur.com"
+    ]
+  }
+}

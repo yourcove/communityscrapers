@@ -1,0 +1,21 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/brandibelle.yml
+name: brandibelle
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - new.brandibelle.com/video
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //div[@class="vd-hdd"]/text()
+      Details:
+        selector: //div[@class="vd-desc"]/text()
+      Studio:
+        Name:
+            fixed: BrandiBelle
+      Image: //img[@class="playerPic"]/@src
+
+# Last Updated November 04, 2020

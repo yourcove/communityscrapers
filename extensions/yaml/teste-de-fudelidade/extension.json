@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.teste-de-fudelidade",
+  "name": "Teste de Fudelidade",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Teste de Fudelidade.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/teste-de-fudelidade.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.testedefudelidade.com",
+      "testedefudelidade.com"
+    ]
+  }
+}

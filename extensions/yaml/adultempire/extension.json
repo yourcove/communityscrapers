@@ -1,0 +1,26 @@
+{
+  "id": "cove.community.scrapers.yaml.adultempire",
+  "name": "AdultEmpire",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AdultEmpire.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/adultempire.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.adultdvdempire.com",
+      "*.adultempire.com",
+      "adultdvdempire.com",
+      "adultempire.com",
+      "www.adultempire.com"
+    ]
+  }
+}

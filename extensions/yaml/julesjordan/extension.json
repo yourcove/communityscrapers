@@ -1,0 +1,31 @@
+{
+  "id": "cove.community.scrapers.yaml.julesjordan",
+  "name": "JulesJordan",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for JulesJordan.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/julesjordan.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.girlgirl.com",
+      "*.julesjordan.com",
+      "*.manuelferrara.com",
+      "*.spermswallowers.com",
+      "*.theassfactory.com",
+      "girlgirl.com",
+      "julesjordan.com",
+      "manuelferrara.com",
+      "spermswallowers.com",
+      "theassfactory.com"
+    ]
+  }
+}

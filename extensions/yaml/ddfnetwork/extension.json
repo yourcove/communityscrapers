@@ -1,0 +1,37 @@
+{
+  "id": "cove.community.scrapers.yaml.ddfnetwork",
+  "name": "DDFNetwork",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for DDFNetwork.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/ddfnetwork.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.1by-day.com",
+      "*.ddfbusty.com",
+      "*.eurogirlsongirls.com",
+      "*.euroteenerotica.com",
+      "*.handsonhardcore.com",
+      "*.hotlegsandfeet.com",
+      "*.houseoftaboo.com",
+      "*.onlyblowjob.com",
+      "1by-day.com",
+      "ddfbusty.com",
+      "eurogirlsongirls.com",
+      "euroteenerotica.com",
+      "handsonhardcore.com",
+      "hotlegsandfeet.com",
+      "houseoftaboo.com",
+      "onlyblowjob.com"
+    ]
+  }
+}

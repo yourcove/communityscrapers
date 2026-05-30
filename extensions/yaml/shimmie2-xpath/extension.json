@@ -1,0 +1,17 @@
+{
+  "id": "cove.community.scrapers.yaml.shimmie2-xpath",
+  "name": "shimmie2-xpath",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for shimmie2-xpath.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/shimmie2-xpath.yml"
+  ]
+}

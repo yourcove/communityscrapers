@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.jakecruisemedia",
+  "name": "JakeCruiseMedia",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for JakeCruiseMedia.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/jakecruisemedia.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.cocksuremen.com",
+      "*.hotdadshotlads.com",
+      "*.jakecruise.com",
+      "*.straightguysforgayeyes.com",
+      "cocksuremen.com",
+      "hotdadshotlads.com",
+      "jakecruise.com",
+      "straightguysforgayeyes.com"
+    ]
+  }
+}

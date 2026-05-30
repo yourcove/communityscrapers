@@ -1,0 +1,48 @@
+{
+  "id": "cove.community.scrapers.yaml.spizoo",
+  "name": "Spizoo",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Spizoo.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/spizoo.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.creamher.com",
+      "*.drdaddypov.com",
+      "*.firstclasspov.com",
+      "*.gothgirlfriends.com",
+      "*.mrluckylife.com",
+      "*.mrluckypov.com",
+      "*.mrluckyraw.com",
+      "*.mrluckyvip.com",
+      "*.rawattack.com",
+      "*.realsensual.com",
+      "*.spizoo.com",
+      "*.tagteampov.com",
+      "*.vlogxxx.com",
+      "creamher.com",
+      "drdaddypov.com",
+      "firstclasspov.com",
+      "gothgirlfriends.com",
+      "mrluckylife.com",
+      "mrluckypov.com",
+      "mrluckyraw.com",
+      "mrluckyvip.com",
+      "rawattack.com",
+      "realsensual.com",
+      "spizoo.com",
+      "tagteampov.com",
+      "vlogxxx.com",
+      "www.spizoo.com"
+    ]
+  }
+}

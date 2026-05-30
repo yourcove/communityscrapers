@@ -1,0 +1,17 @@
+{
+  "id": "cove.community.scrapers.yaml.teenmegaworld",
+  "name": "TeenMegaWorld",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for TeenMegaWorld.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/teenmegaworld.yml"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.bbw-highway",
+  "name": "BBW Highway",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BBW Highway.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/bbw-highway.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.bbwhighway.com",
+      "bbwhighway.com"
+    ]
+  }
+}

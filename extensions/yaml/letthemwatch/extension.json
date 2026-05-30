@@ -1,0 +1,33 @@
+{
+  "id": "cove.community.scrapers.yaml.letthemwatch",
+  "name": "LetThemWatch",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for LetThemWatch.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/letthemwatch.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.cumdumpvan.com",
+      "*.hungpapi.com",
+      "*.letthemwatch.com",
+      "*.uncutking.com",
+      "*.uncutlatinos.com",
+      "*.uncuttwinks.com",
+      "cumdumpvan.com",
+      "hungpapi.com",
+      "letthemwatch.com",
+      "uncutking.com",
+      "uncutlatinos.com",
+      "uncuttwinks.com"
+    ]
+  }
+}

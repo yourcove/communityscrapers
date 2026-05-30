@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.milftugs",
+  "name": "MilfTugs",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MilfTugs.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/milftugs.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.milftugs.com",
+      "milftugs.com",
+      "www.milftugs.com"
+    ]
+  }
+}

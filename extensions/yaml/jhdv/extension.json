@@ -1,0 +1,51 @@
+{
+  "id": "cove.community.scrapers.yaml.jhdv",
+  "name": "Jhdv",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Jhdv.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/jhdv.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.amateurav.com",
+      "*.av69.tv",
+      "*.avanal.com",
+      "*.avstockings.com",
+      "*.avtits.com",
+      "*.ferame.com",
+      "*.gangav.com",
+      "*.hairyav.com",
+      "*.heymilf.com",
+      "*.heyoutdoor.com",
+      "*.lingerieav.com",
+      "*.povav.com",
+      "*.pussyav.com",
+      "*.schoolgirlshd.com",
+      "*.shiofuky.com",
+      "amateurav.com",
+      "av69.tv",
+      "avanal.com",
+      "avstockings.com",
+      "avtits.com",
+      "ferame.com",
+      "gangav.com",
+      "hairyav.com",
+      "heymilf.com",
+      "heyoutdoor.com",
+      "lingerieav.com",
+      "povav.com",
+      "pussyav.com",
+      "schoolgirlshd.com",
+      "shiofuky.com"
+    ]
+  }
+}

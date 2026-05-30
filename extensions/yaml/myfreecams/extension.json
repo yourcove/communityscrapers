@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.myfreecams",
+  "name": "MyFreeCams",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MyFreeCams.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/myfreecams.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.myfreecams.com",
+      "profiles.myfreecams.com",
+      "share.myfreecams.com"
+    ]
+  }
+}

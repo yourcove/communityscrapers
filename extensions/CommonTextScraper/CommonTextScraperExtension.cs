@@ -9,8 +9,8 @@ namespace Cove.Extensions.CommunityScrapers;
 
 public sealed class CommonTextScraperExtension : IScraperProvider
 {
-    private const string ExtensionId = "cove.official.scrapers.common-text";
-    private const string TextScraperId = "cove.official.scrapers.common-text/literotica-scraper";
+    private const string ExtensionId = "cove.community.scrapers.common-text";
+    private const string TextScraperId = "cove.community.scrapers.common-text/literotica-scraper";
     private IServiceProvider? _services;
 
     private static readonly ScraperDescriptor TextScraper = new(
@@ -49,9 +49,6 @@ public sealed class CommonTextScraperExtension : IScraperProvider
             return null;
 
         var info = await TryGetTextInfoAsync(url, ct);
-        if (info == null)
-            return null;
-
         return new ScrapedTextDto
         {
             Title = info.Title,
@@ -71,15 +68,15 @@ public sealed class CommonTextScraperExtension : IScraperProvider
             && uri.AbsolutePath.StartsWith("/s/", StringComparison.OrdinalIgnoreCase);
     }
 
-    private async Task<TextPageInfo?> TryGetTextInfoAsync(string url, CancellationToken ct)
+    private async Task<TextPageInfo> TryGetTextInfoAsync(string url, CancellationToken ct)
     {
         try
         {
             return await GetTextInfoAsync(url, ct);
         }
-        catch
+        catch (Exception ex)
         {
-            return null;
+            throw new InvalidOperationException($"Literotica scrape failed: {ex.Message}", ex);
         }
     }
 

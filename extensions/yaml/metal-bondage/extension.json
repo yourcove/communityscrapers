@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.metal-bondage",
+  "name": "Metal Bondage",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Metal Bondage.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/metal-bondage.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.metalbondage.com",
+      "metalbondage.com"
+    ]
+  }
+}

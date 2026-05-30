@@ -1,0 +1,26 @@
+{
+  "id": "cove.community.scrapers.yaml.gayadultempire",
+  "name": "GayAdultEmpire",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for GayAdultEmpire.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/gayadultempire.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.gaydvdempire.com",
+      "*.gayempire.com",
+      "gaydvdempire.com",
+      "gayempire.com",
+      "www.gaydvdempire.com"
+    ]
+  }
+}

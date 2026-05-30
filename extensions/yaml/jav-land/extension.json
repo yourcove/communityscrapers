@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.jav-land",
+  "name": "Jav.Land",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Jav.Land.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/jav-land.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.jav.land",
+      "jav.land"
+    ]
+  }
+}

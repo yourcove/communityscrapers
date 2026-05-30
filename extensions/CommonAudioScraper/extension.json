@@ -1,5 +1,5 @@
 {
-  "id": "cove.official.scrapers.common-audio",
+  "id": "cove.community.scrapers.common-audio",
   "name": "Common Audio Scraper",
   "version": "1.0.0",
   "description": "Extracts audio metadata from common hosted-audio pages such as Soundgasm and Whyp.",

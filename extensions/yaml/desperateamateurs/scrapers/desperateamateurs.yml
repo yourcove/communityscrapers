@@ -1,0 +1,34 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/DesperateAmateurs.yml
+name: "DesperateAmateurs"
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - desperateamateurs.com/tour3/updates/
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //span[@class="update_title"]
+      Details:
+        selector: //span[@class="latest_update_description"]
+      Performers:
+        Name: //span[@class='tour_update_models']/a
+      Tags:
+        Name: //span[@class="update_tags"]/a/text()|//span[@class="tour_update_tags"]/a/text()
+      Image:
+        selector: //a[@class="fancybox"]/@href
+        postProcess:
+          - replace:
+              - regex: ^
+                with: https://desperateamateurs.com/tour3/
+      Studio:
+        Name:
+          fixed: Desperate Amateurs
+      Date:
+        selector: //span[@class="update_date"]
+        postProcess:
+          - parseDate: 01/02/2006
+# Last Updated December 13, 2023

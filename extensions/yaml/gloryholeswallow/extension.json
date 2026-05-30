@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.gloryholeswallow",
+  "name": "GloryHoleSwallow",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for GloryHoleSwallow.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/gloryholeswallow.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.cumclinic.com",
+      "*.cumpsters.com",
+      "*.gloryholeswallow.com",
+      "*.spytug.com",
+      "cumclinic.com",
+      "cumpsters.com",
+      "gloryholeswallow.com",
+      "spytug.com"
+    ]
+  }
+}

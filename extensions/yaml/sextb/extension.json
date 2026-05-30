@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.sextb",
+  "name": "SexTB",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for SexTB.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/sextb.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.sextb.date",
+      "*.sextb.net",
+      "sextb.date",
+      "sextb.net"
+    ]
+  }
+}

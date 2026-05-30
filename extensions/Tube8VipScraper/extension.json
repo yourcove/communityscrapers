@@ -1,0 +1,11 @@
+{
+  "id": "cove.community.scrapers.tube8vip",
+  "name": "Tube8Vip Scraper",
+  "version": "1.0.0",
+  "description": "Extracts scene, performer, gallery, and group metadata from Tube8Vip pages.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "minCoveVersion": "0.0.16",
+  "entryDll": "Tube8VipScraper.dll",
+  "categories": ["scraper", "metadata", "video"],
+  "permissions": { "network": ["tube8vip.com", "www.tube8vip.com", "elite.com", "www.elite.com", "site-api.project1service.com"] }
+}

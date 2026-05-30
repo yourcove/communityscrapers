@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.shylaj",
+  "name": "ShylaJ",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for ShylaJ.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/shylaj.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.shylaj.com",
+      "shylaj.com"
+    ]
+  }
+}

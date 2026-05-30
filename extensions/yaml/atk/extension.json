@@ -1,0 +1,37 @@
+{
+  "id": "cove.community.scrapers.yaml.atk",
+  "name": "ATK",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for ATK.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/atk.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.amkingdom.com",
+      "*.atkarchives.com",
+      "*.atkexotics.com",
+      "*.atkgalleria.com",
+      "*.atkgirlfriends.com",
+      "*.atkhairy.com",
+      "*.atkpetites.com",
+      "*.atkpremium.com",
+      "amkingdom.com",
+      "atkarchives.com",
+      "atkexotics.com",
+      "atkgalleria.com",
+      "atkgirlfriends.com",
+      "atkhairy.com",
+      "atkpetites.com",
+      "atkpremium.com"
+    ]
+  }
+}

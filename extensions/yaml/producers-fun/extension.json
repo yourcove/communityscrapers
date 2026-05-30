@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.producers-fun",
+  "name": "Producers Fun",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Producers Fun.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/producers-fun.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.producersfun.com",
+      "producersfun.com"
+    ]
+  }
+}

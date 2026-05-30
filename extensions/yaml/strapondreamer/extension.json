@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.strapondreamer",
+  "name": "StraponDreamer",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for StraponDreamer.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/strapondreamer.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.strapondreamer.com",
+      "strapondreamer.com"
+    ]
+  }
+}

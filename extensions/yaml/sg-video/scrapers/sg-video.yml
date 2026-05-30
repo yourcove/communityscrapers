@@ -1,0 +1,27 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/sgvideo.yml
+name: "SG Video"
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - sg-video.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Studio:
+        Name:
+          fixed: SG Video
+      Title:
+        selector: //div//h2/text()
+      Details:
+        selector: //div[@class="descriptions"]//div[@class="texts"]//p[1]/text()
+      Tags:
+        Name:
+          selector: //div[@class="descriptions"]//div[@class="texts"]//p[2]//a/text()
+      Image:
+        selector: //div[@class="descriptions"]//div[@id="thumbs"][@class="video fk"]//img
+      Performers:
+        Name: //div//h2//a/text()
+# Last Updated May 18, 2025

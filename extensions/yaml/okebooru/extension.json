@@ -1,0 +1,17 @@
+{
+  "id": "cove.community.scrapers.yaml.okebooru",
+  "name": "okebooru",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for okebooru.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/okebooru.yml"
+  ]
+}

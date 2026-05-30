@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.aziani",
+  "name": "Aziani",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Aziani.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/aziani.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.aziani.com",
+      "aziani.com"
+    ]
+  }
+}

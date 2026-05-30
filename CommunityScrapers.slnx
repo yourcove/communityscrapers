@@ -1,8 +1,19 @@
 <Solution>
   <Folder Name="/extensions/">
+    <Project Path="extensions/BlackMaleMeScraper/BlackMaleMeScraper.csproj" />
+    <Project Path="extensions/BromoScraper/BromoScraper.csproj" />
     <Project Path="extensions/CommonAudioScraper/CommonAudioScraper.csproj" />
     <Project Path="extensions/CommonTextScraper/CommonTextScraper.csproj" />
+    <Project Path="extensions/ErotikScraper/ErotikScraper.csproj" />
+    <Project Path="extensions/FaKingsScraper/FaKingsScraper.csproj" />
+    <Project Path="extensions/MadLifesScraper/MadLifesScraper.csproj" />
+    <Project Path="extensions/NextDoorHobbyScraper/NextDoorHobbyScraper.csproj" />
+    <Project Path="extensions/PepePornScraper/PepePornScraper.csproj" />
+    <Project Path="extensions/PornhubScraper/PornhubScraper.csproj" />
     <Project Path="extensions/RedditScraper/RedditScraper.csproj" />
+    <Project Path="extensions/SeanCodyScraper/SeanCodyScraper.csproj" />
+    <Project Path="extensions/Tube8VipScraper/Tube8VipScraper.csproj" />
+    <Project Path="extensions/WhyNotBiScraper/WhyNotBiScraper.csproj" />
     <Project Path="extensions/YtDlpScraper/YtDlpScraper.csproj" />
   </Folder>
 </Solution>

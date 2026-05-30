@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.hollyrandall",
+  "name": "HollyRandall",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for HollyRandall.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/hollyrandall.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.hollyrandall.com",
+      "hollyrandall.com"
+    ]
+  }
+}

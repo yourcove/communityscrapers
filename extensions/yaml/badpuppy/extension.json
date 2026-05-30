@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.badpuppy",
+  "name": "BadPuppy",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BadPuppy.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/badpuppy.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.badpuppy.com",
+      "*.clubamateurusa.com",
+      "badpuppy.com",
+      "clubamateurusa.com"
+    ]
+  }
+}

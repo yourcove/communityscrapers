@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.boundlife",
+  "name": "BoundLife",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BoundLife.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/boundlife.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.boundlife.com",
+      "boundlife.com"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.the-bro-network",
+  "name": "The Bro Network",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for The Bro Network.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/the-bro-network.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.thebronetwork.com",
+      "thebronetwork.com"
+    ]
+  }
+}

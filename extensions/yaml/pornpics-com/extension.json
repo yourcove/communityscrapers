@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.pornpics-com",
+  "name": "pornpics.com",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for pornpics.com.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/pornpics-com.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.pornpics.com",
+      "pornpics.com"
+    ]
+  }
+}

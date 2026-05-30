@@ -1,0 +1,49 @@
+{
+  "id": "cove.community.scrapers.yaml.mvg",
+  "name": "MVG",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MVG.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/mvg.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.amaraw.com",
+      "*.blackcockpassion.com",
+      "*.gogayguy.com",
+      "*.iluvmilfs.com",
+      "*.iluvteens.com",
+      "*.italianshotclub.com",
+      "*.lesbiantribe.com",
+      "*.myslutwifegoesblack.com",
+      "*.oblackgirls.com",
+      "*.oblowjobs.com",
+      "*.pornlandvideos.com",
+      "*.sologirlsmania.com",
+      "*.upshemale.com",
+      "*.vangoren.com",
+      "amaraw.com",
+      "blackcockpassion.com",
+      "gogayguy.com",
+      "iluvmilfs.com",
+      "iluvteens.com",
+      "italianshotclub.com",
+      "lesbiantribe.com",
+      "myslutwifegoesblack.com",
+      "oblackgirls.com",
+      "oblowjobs.com",
+      "pornlandvideos.com",
+      "sologirlsmania.com",
+      "upshemale.com",
+      "vangoren.com"
+    ]
+  }
+}

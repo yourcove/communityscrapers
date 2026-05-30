@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.antoniosuleiman-com",
+  "name": "AntonioSuleiman.com",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AntonioSuleiman.com.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/antoniosuleiman-com.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.antoniosuleiman.com",
+      "antoniosuleiman.com"
+    ]
+  }
+}

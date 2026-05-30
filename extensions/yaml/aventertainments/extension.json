@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.aventertainments",
+  "name": "AVEntertainments",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AVEntertainments.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/aventertainments.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.aventertainments.com",
+      "aventertainments.com",
+      "www.aventertainments.com"
+    ]
+  }
+}

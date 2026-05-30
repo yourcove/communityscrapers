@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.blumedia-network",
+  "name": "BluMedia Network",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BluMedia Network.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/blumedia-network.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.boygusher.com",
+      "*.brokestraightboys.com",
+      "*.collegeboyphysicals.com",
+      "*.collegedudes.com",
+      "boygusher.com",
+      "brokestraightboys.com",
+      "collegeboyphysicals.com",
+      "collegedudes.com"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.avmoo",
+  "name": "AVMoo",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AVMoo.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/avmoo.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.avmoo.online",
+      "*.avsox.click",
+      "avmoo.online",
+      "avsox.click"
+    ]
+  }
+}

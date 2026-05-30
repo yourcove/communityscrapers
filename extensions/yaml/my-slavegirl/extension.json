@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.my-slavegirl",
+  "name": "My Slavegirl",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for My Slavegirl.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/my-slavegirl.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.my-slavegirl.com",
+      "my-slavegirl.com"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.xslist-jav",
+  "name": "XsList (JAV)",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for XsList (JAV).",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/xslist-jav.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.xslist.org",
+      "xslist.org"
+    ]
+  }
+}

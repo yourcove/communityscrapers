@@ -1,0 +1,35 @@
+{
+  "id": "cove.community.scrapers.yaml.puremedia",
+  "name": "PureMedia",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for PureMedia.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/puremedia.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.becomingfemme.com",
+      "*.pornstarbts.com",
+      "*.pure-bbw.com",
+      "*.pure-ts.com",
+      "*.pure-xxx.com",
+      "*.sissypov.com",
+      "*.tspov.com",
+      "becomingfemme.com",
+      "pornstarbts.com",
+      "pure-bbw.com",
+      "pure-ts.com",
+      "pure-xxx.com",
+      "sissypov.com",
+      "tspov.com"
+    ]
+  }
+}

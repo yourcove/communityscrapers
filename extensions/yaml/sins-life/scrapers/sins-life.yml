@@ -1,0 +1,32 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/SinsLife.yml
+name: Sins Life
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - sinslife.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //h1[@class="font-Oswald uppercase"]
+      Date:
+        selector: //span[contains(.,"Release Date:")]/following-sibling::text()
+        postProcess:
+          - parseDate: January 2, 2006
+      Performers:
+        Name: //div[@class="item-models"]//a
+      Details:
+        selector: //div[@class="item-description full"]/p
+      Image:
+        selector: //div[@class="player-window-play"]/following-sibling::img/@src
+        postProcess:
+          - replace:
+              - regex: ^
+                with: "https:"
+      Studio:
+        Name:
+          fixed: Sins Life
+# Last Updated May 24, 2021

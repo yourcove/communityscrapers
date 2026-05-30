@@ -1,0 +1,33 @@
+{
+  "id": "cove.community.scrapers.yaml.wank-it-now",
+  "name": "Wank It Now",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Wank It Now.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/wank-it-now.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.boppingbabes.com",
+      "*.downblousejerk.com",
+      "*.lingerietales.com",
+      "*.realbikinigirls.com",
+      "*.upskirtjerk.com",
+      "*.wankitnow.com",
+      "boppingbabes.com",
+      "downblousejerk.com",
+      "lingerietales.com",
+      "realbikinigirls.com",
+      "upskirtjerk.com",
+      "wankitnow.com"
+    ]
+  }
+}

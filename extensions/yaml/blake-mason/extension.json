@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.blake-mason",
+  "name": "Blake Mason",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Blake Mason.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/blake-mason.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.blakemason.com",
+      "blakemason.com"
+    ]
+  }
+}

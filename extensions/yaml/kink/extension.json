@@ -1,0 +1,28 @@
+{
+  "id": "cove.community.scrapers.yaml.kink",
+  "name": "Kink",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Kink.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/kink.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.kink.com",
+      "*.kinkmen.com",
+      "*.kinktrans.com",
+      "kink.com",
+      "kinkmen.com",
+      "kinktrans.com",
+      "www.kink.com"
+    ]
+  }
+}

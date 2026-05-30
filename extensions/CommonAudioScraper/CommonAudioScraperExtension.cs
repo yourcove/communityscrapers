@@ -8,8 +8,8 @@ namespace Cove.Extensions.CommunityScrapers;
 
 public sealed class CommonAudioScraperExtension : IScraperProvider
 {
-    private const string ExtensionId = "cove.official.scrapers.common-audio";
-    private const string AudioScraperId = "cove.official.scrapers.common-audio/scraper";
+    private const string ExtensionId = "cove.community.scrapers.common-audio";
+    private const string AudioScraperId = "cove.community.scrapers.common-audio/scraper";
     private IServiceProvider? _services;
 
     private static readonly ScraperDescriptor AudioScraper = new(

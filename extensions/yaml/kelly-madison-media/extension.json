@@ -1,0 +1,35 @@
+{
+  "id": "cove.community.scrapers.yaml.kelly-madison-media",
+  "name": "Kelly Madison Media",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Kelly Madison Media.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/kelly-madison-media.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.5kporn.com",
+      "*.5kteens.com",
+      "*.8kmilfs.com",
+      "*.8kteens.com",
+      "*.kellymadison.com",
+      "*.pornfidelity.com",
+      "*.teenfidelity.com",
+      "5kporn.com",
+      "5kteens.com",
+      "8kmilfs.com",
+      "8kteens.com",
+      "kellymadison.com",
+      "pornfidelity.com",
+      "teenfidelity.com"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cove.community.scrapers.yaml.akiralaneproductions",
+  "name": "AkiraLaneProductions",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AkiraLaneProductions.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/akiralaneproductions.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.akiralane.com",
+      "*.akiralanebound.com",
+      "*.pantyhoselane.com",
+      "akiralane.com",
+      "akiralanebound.com",
+      "pantyhoselane.com"
+    ]
+  }
+}

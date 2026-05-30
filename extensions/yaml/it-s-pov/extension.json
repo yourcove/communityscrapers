@@ -1,0 +1,37 @@
+{
+  "id": "cove.community.scrapers.yaml.it-s-pov",
+  "name": "It's POV",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for It's POV.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/it-s-pov.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.backdoorpov.com",
+      "*.feetishpov.com",
+      "*.intimatepov.com",
+      "*.itspov.com",
+      "*.officepov.com",
+      "*.petitepov.com",
+      "*.schoolpov.com",
+      "*.steppov.com",
+      "backdoorpov.com",
+      "feetishpov.com",
+      "intimatepov.com",
+      "itspov.com",
+      "officepov.com",
+      "petitepov.com",
+      "schoolpov.com",
+      "steppov.com"
+    ]
+  }
+}

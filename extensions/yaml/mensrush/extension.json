@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.mensrush",
+  "name": "MensRush",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MensRush.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/mensrush.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.mensrush.tv",
+      "www.mensrush.tv"
+    ]
+  }
+}

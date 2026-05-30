@@ -1,0 +1,29 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/JacquieEtMichelStars.yml
+name: JacquieEtMichelStars
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - jacquieetmichelstars.com
+    scraper: sceneScraper
+
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //meta[@property="og:title"]/@content
+      Details: //div[@class='section__movie-description']/p
+      Image: //video/@poster
+      Date:
+        selector: //p[contains(.,'Published on')]
+        postProcess:
+          - parseDate: Published on 02/01/2006
+      Performers:
+        Name: //h3[@class='top-stars_details_title']
+      Studio:
+        Name:
+          fixed: Jacquie et Michel Stars
+      Tags:
+        Name: //li/a[contains(@href,'/categorie/')]
+
+# Last Updated May 14, 2024

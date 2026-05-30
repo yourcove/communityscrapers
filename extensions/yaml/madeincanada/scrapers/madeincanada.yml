@@ -1,0 +1,28 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/MadeInCanada.yml
+name: MadeInCanada
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - madeincanada.xxx
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //h2[@class="sec-tit"]/span
+      Date:
+        selector: //div[@class="released-date"]/span[@class="grey"]
+        postProcess:
+          - parseDate: January 2, 2006
+      Performers:
+        Name: //span/a
+      Details: //div[@class="preview-description"]/p
+      Image:
+        selector: //a[@id="fake-play"]/div/img/@src
+      Studio:
+        Name:
+          fixed: Made in Canada
+# Last Updated April 25, 2021
+

@@ -1,0 +1,11 @@
+{
+  "id": "cove.community.scrapers.erotik",
+  "name": "Erotik Scraper",
+  "version": "1.0.0",
+  "description": "Extracts group metadata from Erotik pages.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "minCoveVersion": "0.0.16",
+  "entryDll": "ErotikScraper.dll",
+  "categories": ["scraper", "metadata", "video"],
+  "permissions": { "network": ["erotik.com", "*.erotik.com", "api.erotik.com"] }
+}

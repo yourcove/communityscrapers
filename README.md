@@ -4,12 +4,12 @@ Community-maintained scraper extensions published through the official Cove exte
 
 ## Extensions
 
-- `cove.official.scrapers` - manifest-only bundle that installs the common scraper set.
-- `cove.official.scrapers.common-audio` - Soundgasm and Whyp audio metadata extraction.
-- `cove.official.scrapers.common-text` - Literotica story metadata extraction.
-- `cove.official.scrapers.reddit` - Reddit and Redgifs metadata extraction.
-- `cove.official.scrapers.ytdlp` - generic scene metadata extraction through `yt-dlp`.
-- `cove.official.scrapers.yaml-video` - installable YAML scraper pack for video sites.
+- `cove.community.scrapers` - manifest-only bundle that installs the common scraper set.
+- `cove.community.scrapers.common-audio` - Soundgasm and Whyp audio metadata extraction.
+- `cove.community.scrapers.common-text` - Literotica story metadata extraction.
+- `cove.community.scrapers.reddit` - Reddit and Redgifs metadata extraction.
+- `cove.community.scrapers.ytdlp` - generic scene metadata extraction through `yt-dlp`.
+- `cove.community.scrapers.yaml-video` - installable YAML scraper pack for video sites.
 
 ## YAML Scrapers
 

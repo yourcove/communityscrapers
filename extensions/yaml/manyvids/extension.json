@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.manyvids",
+  "name": "ManyVids",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for ManyVids.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/manyvids.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.manyvids.com",
+      "manyvids.com",
+      "www.manyvids.com"
+    ]
+  }
+}

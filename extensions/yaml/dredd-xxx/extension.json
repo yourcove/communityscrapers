@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.dredd-xxx",
+  "name": "Dredd XXX",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Dredd XXX.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/dredd-xxx.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.officialdreddxxx.com",
+      "officialdreddxxx.com"
+    ]
+  }
+}

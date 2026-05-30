@@ -1,0 +1,28 @@
+{
+  "id": "cove.community.scrapers.yaml.xvideos",
+  "name": "Xvideos",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Xvideos.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/xvideos.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.xvideos.com",
+      "*.xvideos.red",
+      "*.xvideos2.com",
+      "www.xvideos.com",
+      "xvideos.com",
+      "xvideos.red",
+      "xvideos2.com"
+    ]
+  }
+}

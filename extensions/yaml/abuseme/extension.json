@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.abuseme",
+  "name": "AbuseMe",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AbuseMe.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/abuseme.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.abuseme.com",
+      "abuseme.com"
+    ]
+  }
+}

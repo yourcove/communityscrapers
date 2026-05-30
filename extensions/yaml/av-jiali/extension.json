@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.av-jiali",
+  "name": "AV Jiali",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AV Jiali.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/av-jiali.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.avjiali.com",
+      "avjiali.com"
+    ]
+  }
+}

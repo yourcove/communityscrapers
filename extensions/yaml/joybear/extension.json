@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.joybear",
+  "name": "JoyBear",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for JoyBear.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/joybear.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.joybear.com",
+      "joybear.com"
+    ]
+  }
+}

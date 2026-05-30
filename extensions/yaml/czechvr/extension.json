@@ -1,0 +1,34 @@
+{
+  "id": "cove.community.scrapers.yaml.czechvr",
+  "name": "CzechVR",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for CzechVR.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/czechvr.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.czechar.com",
+      "*.czechvr.com",
+      "*.czechvrcasting.com",
+      "*.czechvrfetish.com",
+      "*.czechvrnetwork.com",
+      "*.vrintimacy.com",
+      "czechar.com",
+      "czechvr.com",
+      "czechvrcasting.com",
+      "czechvrfetish.com",
+      "czechvrnetwork.com",
+      "vrintimacy.com",
+      "www.czechvr.com"
+    ]
+  }
+}

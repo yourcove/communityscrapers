@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.glamose",
+  "name": "Glamose",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Glamose.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/glamose.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.damselsinperil.com",
+      "*.f-f-fights.com",
+      "*.femmefight.com",
+      "*.lethallipstick.com",
+      "damselsinperil.com",
+      "f-f-fights.com",
+      "femmefight.com",
+      "lethallipstick.com"
+    ]
+  }
+}

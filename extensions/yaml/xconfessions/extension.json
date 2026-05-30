@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.xconfessions",
+  "name": "XConfessions",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for XConfessions.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/xconfessions.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.xconfessions.com",
+      "xconfessions.com"
+    ]
+  }
+}

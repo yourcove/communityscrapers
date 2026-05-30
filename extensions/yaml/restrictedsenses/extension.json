@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.restrictedsenses",
+  "name": "RestrictedSenses",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for RestrictedSenses.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/restrictedsenses.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.restrictedsenses.com",
+      "restrictedsenses.com"
+    ]
+  }
+}

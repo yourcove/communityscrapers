@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.randyblue",
+  "name": "RandyBlue",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for RandyBlue.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/randyblue.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.randyblue.com",
+      "randyblue.com"
+    ]
+  }
+}

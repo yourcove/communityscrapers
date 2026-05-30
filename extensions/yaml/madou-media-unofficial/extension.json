@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.madou-media-unofficial",
+  "name": "Madou Media Unofficial",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Madou Media Unofficial.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/madou-media-unofficial.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.madouqu.com",
+      "madouqu.com"
+    ]
+  }
+}

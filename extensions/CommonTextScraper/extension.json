@@ -1,5 +1,5 @@
 {
-  "id": "cove.official.scrapers.common-text",
+  "id": "cove.community.scrapers.common-text",
   "name": "Common Text Scraper",
   "version": "1.0.0",
   "description": "Extracts story metadata from common text sites. Currently supports Literotica.",

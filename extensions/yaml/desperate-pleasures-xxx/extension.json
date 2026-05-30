@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.desperate-pleasures-xxx",
+  "name": "Desperate Pleasures XXX",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Desperate Pleasures XXX.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/desperate-pleasures-xxx.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.desperatepleasuresxxx.com",
+      "desperatepleasuresxxx.com"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "cove.community.scrapers.yaml.pinupdollars",
+  "name": "Pinupdollars",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Pinupdollars.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/pinupdollars.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.lanakendrick.com",
+      "*.leannecrow.com",
+      "*.monicamendez.com",
+      "*.pinupfiles.com",
+      "*.rachelaldana.com",
+      "*.tessafowler.com",
+      "lanakendrick.com",
+      "leannecrow.com",
+      "monicamendez.com",
+      "pinupfiles.com",
+      "rachelaldana.com",
+      "tessafowler.com"
+    ]
+  }
+}

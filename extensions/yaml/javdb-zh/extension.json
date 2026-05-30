@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.javdb-zh",
+  "name": "JavDB_zh",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for JavDB_zh.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/javdb-zh.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.javdb.com",
+      "*.javdb367.com",
+      "javdb.com",
+      "javdb367.com"
+    ]
+  }
+}

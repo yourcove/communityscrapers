@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.homeclips",
+  "name": "HomeClips",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for HomeClips.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/homeclips.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.funbags.com",
+      "*.homeclips.com",
+      "www.funbags.com",
+      "www.homeclips.com"
+    ]
+  }
+}

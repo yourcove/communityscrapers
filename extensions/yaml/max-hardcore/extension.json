@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.max-hardcore",
+  "name": "Max-Hardcore",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Max-Hardcore.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/max-hardcore.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.max-hardcore.com",
+      "max-hardcore.com"
+    ]
+  }
+}

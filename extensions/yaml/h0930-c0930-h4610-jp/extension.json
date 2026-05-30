@@ -1,0 +1,28 @@
+{
+  "id": "cove.community.scrapers.yaml.h0930-c0930-h4610-jp",
+  "name": "H0930_C0930_H4610-JP",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for H0930_C0930_H4610-JP.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/h0930-c0930-h4610-jp.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.c0930.com",
+      "*.h0930.com",
+      "*.h4610.com",
+      "c0930.com",
+      "h0930.com",
+      "h4610.com",
+      "www"
+    ]
+  }
+}

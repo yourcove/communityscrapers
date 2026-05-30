@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.lordaardvark",
+  "name": "LordAardvark",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for LordAardvark.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/lordaardvark.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.lordaardvark.com",
+      "lordaardvark.com"
+    ]
+  }
+}

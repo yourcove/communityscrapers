@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.incestflix",
+  "name": "IncestFlix",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for IncestFlix.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/incestflix.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.incestflix.com",
+      "incestflix.com"
+    ]
+  }
+}

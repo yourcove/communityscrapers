@@ -1,0 +1,29 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/VrxDB.yml
+name: VrxDB
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - vrxdb.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //h1[contains(@class,"elementor-heading-title")]
+      Date:
+        selector: //span[contains(text(),"Released:")]/following-sibling::text()
+        postProcess:
+          - parseDate: January 2, 2006
+      Performers:
+        Name: //span[contains(text(),"Starring:")]/following-sibling::a
+      Tags:
+        Name: //div[@class="jet-listing jet-listing-dynamic-terms"]/a[contains(@href,"/video-categories/")]
+      Details: //div[@class="elementor-element elementor-element-520671f1 elementor-widget elementor-widget-jet-listing-dynamic-field"]
+      Image:
+        selector: //meta[@property="og:image"]/@content
+      Studio:
+        Name:
+          selector: //span[contains(text(),"Studio:")]/following-sibling::a
+# Last Updated April 08, 2022

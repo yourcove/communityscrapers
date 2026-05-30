@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.ikissgirls",
+  "name": "IKissGirls",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for IKissGirls.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/ikissgirls.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.ikissgirls.com",
+      "ikissgirls.com"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.milovana",
+  "name": "Milovana",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Milovana.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/milovana.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.milovana.com",
+      "milovana.com"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.newsensationsmain",
+  "name": "NewSensationsMain",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for NewSensationsMain.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/newsensationsmain.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.newsensations.com",
+      "newsensations.com",
+      "www.newsensations.com"
+    ]
+  }
+}

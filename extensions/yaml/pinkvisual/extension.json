@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.pinkvisual",
+  "name": "pinkvisual",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for pinkvisual.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/pinkvisual.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.ipinkvisualpass.com",
+      "www.ipinkvisualpass.com"
+    ]
+  }
+}

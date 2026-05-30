@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.demedia",
+  "name": "DEMedia",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for DEMedia.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/demedia.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.blackpayback.com",
+      "*.radicaljizzlam.com",
+      "blackpayback.com",
+      "radicaljizzlam.com"
+    ]
+  }
+}

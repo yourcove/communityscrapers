@@ -1,0 +1,67 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/nhentai.yml
+name: nhentai
+
+# intended to extract gallery ID from folder / zip / cbz file names as produces by gallery-dl ("1234567 some gallery name.zip")
+galleryByFragment:
+  action: scrapeJson
+  queryURL: https://nhentai.net/api/v2/galleries/{filename}
+  queryURLReplace:
+    filename:
+      - regex: '(?:\[|^)?(\d+).*' # capture numeric sequence at begining as gallery ID
+        with: "$1"
+  scraper: galleryScraper
+
+galleryByURL:
+  - action: scrapeJson
+    url:
+      - nhentai.net/g/
+    queryURL: "{url}"
+    queryURLReplace:
+      url:
+        - regex: '.+\/g\/(\d+)\/'
+          with: https://nhentai.net/api/v2/galleries/$1
+    scraper: galleryScraper
+
+jsonScrapers:
+  galleryScraper:
+    gallery:
+      Title:
+        selector: title.pretty
+      Details:
+        selector: "{title.english,title.japanese}.@values"
+        concat: "\n\n"
+      Code: 
+        selector: id
+      URL: 
+        selector: id
+        postProcess:
+          - replace:
+            - regex: (\d+)
+              with: "https://nhentai.net/g/$1/"
+      Date:
+        selector: upload_date
+        postProcess:
+          - parseDate: unix
+      Photographer:
+        selector: 'tags.#(type=="group")#|0.name'
+      Tags:
+        Name: '[tags.#(type=="tag")#.name,tags.#(type=="parody")#.name,tags.#(type=="category")#.name]|@flatten'
+      Performers:
+        Name: 'tags.#(type=="character")#.name'
+      Studio:
+        Name: '[tags.#(type=="artist")#,tags.#(type=="group")#]|@flatten.0.name'
+
+# apikey must be popualated manually
+# shared apikey would bypass their ratelimit (as per site admin)
+# see https://nhentai.net/api/v2/docs for details
+driver:
+  headers:
+     # API key seems to be optional
+     #- Key: Authorization
+     #  Value: Key YOUR_APIKEY_HERE
+    - Key: User-Agent
+      Value: stashapp/stash scraper
+
+# Last Updated May 2, 2026

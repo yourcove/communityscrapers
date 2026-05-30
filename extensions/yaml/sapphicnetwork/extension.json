@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.sapphicnetwork",
+  "name": "sapphicnetwork",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for sapphicnetwork.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/sapphicnetwork.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.fistflush.com",
+      "*.givemepink.com",
+      "*.sapphicerotica.com",
+      "*.sapphix.com",
+      "fistflush.com",
+      "givemepink.com",
+      "sapphicerotica.com",
+      "sapphix.com"
+    ]
+  }
+}

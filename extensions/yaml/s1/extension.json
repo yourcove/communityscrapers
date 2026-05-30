@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.s1",
+  "name": "S1",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for S1.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/s1.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.s1s1s1.com",
+      "s1s1s1.com"
+    ]
+  }
+}

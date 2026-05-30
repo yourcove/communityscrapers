@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.jacquieetmichelstars",
+  "name": "JacquieEtMichelStars",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for JacquieEtMichelStars.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/jacquieetmichelstars.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.jacquieetmichelstars.com",
+      "jacquieetmichelstars.com"
+    ]
+  }
+}

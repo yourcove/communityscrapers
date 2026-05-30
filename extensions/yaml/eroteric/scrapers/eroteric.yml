@@ -1,0 +1,33 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/Eroteric.yml
+name: Eroteric
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - eroteric.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //title
+      Date:
+        selector: //li[@class="bwp-single-post-meta-date"]/span[@class="date updated"]/text()
+        postProcess:
+          - parseDate: 2006-01-02
+      Details: //div[@class="bwp-content entry-content clearfix"]/p
+      Performers:
+        Name: //div[@class="bwp-post-lenght zor_tags_cat"]/a/text()
+      Tags:
+        Name: //a[@rel="category tag"]/text()
+      Studio:
+        Name:
+          fixed: Eroteric
+      Image:
+        selector: //video/@poster
+        postProcess:
+          - replace:
+            - regex: "-scaled"
+              with: ""
+ 
+# Last Updated April 1, 2026

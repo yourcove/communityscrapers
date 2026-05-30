@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.perverzija",
+  "name": "Perverzija",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Perverzija.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/perverzija.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.perverzija.com",
+      "tube.perverzija.com"
+    ]
+  }
+}

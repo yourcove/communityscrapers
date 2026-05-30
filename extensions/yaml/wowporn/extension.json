@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.wowporn",
+  "name": "WowPorn",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for WowPorn.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/wowporn.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.allfinegirls.com",
+      "*.wowgirls.com",
+      "*.wowgirls.xxx",
+      "*.wowporn.com",
+      "allfinegirls.com",
+      "wowgirls.com",
+      "wowgirls.xxx",
+      "wowporn.com"
+    ]
+  }
+}

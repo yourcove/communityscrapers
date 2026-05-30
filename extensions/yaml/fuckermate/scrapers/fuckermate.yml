@@ -1,0 +1,29 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/Fuckermate.yml
+name: Fuckermate
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - fuckermate.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //section[@id="video-section"]//div[@class="post-header font-alt"]/h1[1]
+      Details:
+        selector: //div[@class="post-entry"]//p[@class="text-justify"]
+      Image: //videoplayer/@poster
+      Date:
+        selector: //div[@id="video-frame"]/following-sibling::div//div[@class="post-meta"]/text()[1]
+        postProcess:
+          - parseDate: 2006-01-02 |
+      Studio:
+        Name:
+          fixed: FuckerMate
+      Tags:
+        Name:
+          selector: //section[@id="video-section"]//div[@class="post-meta"]/a
+      Performers:
+        Name: //h1[@class="post-title"]/a()
+# Last Updated January 10, 2021

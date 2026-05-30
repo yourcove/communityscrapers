@@ -3,38 +3,104 @@
   "extensions": [
     {
       "name": "CommonScrapersBundle",
-      "id": "cove.official.scrapers",
+      "id": "cove.community.scrapers",
       "path": "extensions/CommonScrapersBundle",
       "tagPrefix": "common/",
       "manifestOnly": true
     },
     {
+      "name": "BlackMaleMeScraper",
+      "id": "cove.community.scrapers.blackmaleme",
+      "path": "extensions/BlackMaleMeScraper",
+      "tagPrefix": "blackmaleme/"
+    },
+    {
+      "name": "BromoScraper",
+      "id": "cove.community.scrapers.bromo",
+      "path": "extensions/BromoScraper",
+      "tagPrefix": "bromo/"
+    },
+    {
       "name": "CommonAudioScraper",
-      "id": "cove.official.scrapers.common-audio",
+      "id": "cove.community.scrapers.common-audio",
       "path": "extensions/CommonAudioScraper",
       "tagPrefix": "common-audio/"
     },
     {
       "name": "CommonTextScraper",
-      "id": "cove.official.scrapers.common-text",
+      "id": "cove.community.scrapers.common-text",
       "path": "extensions/CommonTextScraper",
       "tagPrefix": "common-text/"
     },
     {
+      "name": "ErotikScraper",
+      "id": "cove.community.scrapers.erotik",
+      "path": "extensions/ErotikScraper",
+      "tagPrefix": "erotik/"
+    },
+    {
+      "name": "FaKingsScraper",
+      "id": "cove.community.scrapers.fakings",
+      "path": "extensions/FaKingsScraper",
+      "tagPrefix": "fakings/"
+    },
+    {
+      "name": "MadLifesScraper",
+      "id": "cove.community.scrapers.madlifes",
+      "path": "extensions/MadLifesScraper",
+      "tagPrefix": "madlifes/"
+    },
+    {
+      "name": "NextDoorHobbyScraper",
+      "id": "cove.community.scrapers.nextdoorhobby",
+      "path": "extensions/NextDoorHobbyScraper",
+      "tagPrefix": "nextdoorhobby/"
+    },
+    {
+      "name": "PepePornScraper",
+      "id": "cove.community.scrapers.pepeporn",
+      "path": "extensions/PepePornScraper",
+      "tagPrefix": "pepeporn/"
+    },
+    {
+      "name": "PornhubScraper",
+      "id": "cove.community.scrapers.pornhub",
+      "path": "extensions/PornhubScraper",
+      "tagPrefix": "pornhub/"
+    },
+    {
       "name": "RedditScraper",
-      "id": "cove.official.scrapers.reddit",
+      "id": "cove.community.scrapers.reddit",
       "path": "extensions/RedditScraper",
       "tagPrefix": "reddit/"
     },
     {
+      "name": "SeanCodyScraper",
+      "id": "cove.community.scrapers.seancody",
+      "path": "extensions/SeanCodyScraper",
+      "tagPrefix": "seancody/"
+    },
+    {
+      "name": "Tube8VipScraper",
+      "id": "cove.community.scrapers.tube8vip",
+      "path": "extensions/Tube8VipScraper",
+      "tagPrefix": "tube8vip/"
+    },
+    {
+      "name": "WhyNotBiScraper",
+      "id": "cove.community.scrapers.whynotbi",
+      "path": "extensions/WhyNotBiScraper",
+      "tagPrefix": "whynotbi/"
+    },
+    {
       "name": "YtDlpScraper",
-      "id": "cove.official.scrapers.ytdlp",
+      "id": "cove.community.scrapers.ytdlp",
       "path": "extensions/YtDlpScraper",
       "tagPrefix": "ytdlp/"
     },
     {
       "name": "YamlVideoScrapers",
-      "id": "cove.official.scrapers.yaml-video",
+      "id": "cove.community.scrapers.yaml-video",
       "path": "extensions/YamlVideoScrapers",
       "tagPrefix": "yaml-video/",
       "manifestOnly": true,

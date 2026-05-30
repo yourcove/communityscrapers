@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.reddit",
+  "name": "Reddit",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Reddit.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/reddit.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.reddit.com",
+      "api.reddit.com",
+      "reddit.com"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.dollrotic",
+  "name": "DollRotic",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for DollRotic.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/dollrotic.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.dollrotic.com",
+      "*.femlatex.com",
+      "*.gymnastic.xxx",
+      "*.gymrotic.com",
+      "dollrotic.com",
+      "femlatex.com",
+      "gymnastic.xxx",
+      "gymrotic.com"
+    ]
+  }
+}

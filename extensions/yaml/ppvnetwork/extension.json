@@ -1,0 +1,37 @@
+{
+  "id": "cove.community.scrapers.yaml.ppvnetwork",
+  "name": "PPVNetwork",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for PPVNetwork.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/ppvnetwork.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.barebackbox.com",
+      "*.bearboxxx.com",
+      "*.butchbear.tv",
+      "*.darkalleyxt.com",
+      "*.rawandrough.com",
+      "*.rawnastyfuckers.com",
+      "*.rawtop.tv",
+      "*.treasureislandmedia.tv",
+      "barebackbox.com",
+      "bearboxxx.com",
+      "butchbear.tv",
+      "darkalleyxt.com",
+      "rawandrough.com",
+      "rawnastyfuckers.com",
+      "rawtop.tv",
+      "treasureislandmedia.tv"
+    ]
+  }
+}

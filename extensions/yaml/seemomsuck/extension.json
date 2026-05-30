@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.seemomsuck",
+  "name": "SeeMomSuck",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for SeeMomSuck.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/seemomsuck.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.seemomsuck.com",
+      "seemomsuck.com"
+    ]
+  }
+}

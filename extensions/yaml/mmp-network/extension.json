@@ -1,0 +1,39 @@
+{
+  "id": "cove.community.scrapers.yaml.mmp-network",
+  "name": "MMP Network",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MMP Network.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/mmp-network.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.dirty-chubby.com",
+      "*.dirtycasting.com",
+      "*.fakeshooting.com",
+      "*.lustyxxxfamily.com",
+      "*.mmpnetwork.com",
+      "*.pornmuschimovie.com",
+      "*.povbitch.com",
+      "*.sexgamesprivate.com",
+      "*.xxxrealityfuck.com",
+      "dirty-chubby.com",
+      "dirtycasting.com",
+      "fakeshooting.com",
+      "lustyxxxfamily.com",
+      "mmpnetwork.com",
+      "pornmuschimovie.com",
+      "povbitch.com",
+      "sexgamesprivate.com",
+      "xxxrealityfuck.com"
+    ]
+  }
+}

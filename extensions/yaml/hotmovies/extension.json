@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.hotmovies",
+  "name": "Hotmovies",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Hotmovies.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/hotmovies.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.hotmovies.com",
+      "hotmovies.com",
+      "www.hotmovies.com"
+    ]
+  }
+}

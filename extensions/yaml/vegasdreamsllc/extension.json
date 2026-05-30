@@ -1,0 +1,29 @@
+{
+  "id": "cove.community.scrapers.yaml.vegasdreamsllc",
+  "name": "VegasDreamsLLC",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for VegasDreamsLLC.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/vegasdreamsllc.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.asiansexdiary.com",
+      "*.helloladyboy.com",
+      "*.milftrip.com",
+      "*.screwmetoo.com",
+      "asiansexdiary.com",
+      "helloladyboy.com",
+      "milftrip.com",
+      "screwmetoo.com"
+    ]
+  }
+}

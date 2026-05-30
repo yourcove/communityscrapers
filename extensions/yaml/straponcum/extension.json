@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.straponcum",
+  "name": "StrapOnCum",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for StrapOnCum.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/straponcum.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.straponcum.com",
+      "straponcum.com"
+    ]
+  }
+}

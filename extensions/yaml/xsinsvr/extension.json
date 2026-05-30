@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.xsinsvr",
+  "name": "xSinsVR",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for xSinsVR.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/xsinsvr.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.billiestar.com",
+      "*.xsinsvr.com",
+      "billiestar.com",
+      "xsinsvr.com"
+    ]
+  }
+}

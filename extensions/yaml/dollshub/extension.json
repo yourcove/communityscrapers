@@ -1,0 +1,37 @@
+{
+  "id": "cove.community.scrapers.yaml.dollshub",
+  "name": "DollsHub",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for DollsHub.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/dollshub.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.filthygapers.com",
+      "*.gynoexclusive.com",
+      "*.ihuntmycunt.com",
+      "*.maturegapers.com",
+      "*.maturegynoexam.com",
+      "*.maturegynospy.com",
+      "*.nastypublicsex.com",
+      "*.oldsfuckdolls.com",
+      "filthygapers.com",
+      "gynoexclusive.com",
+      "ihuntmycunt.com",
+      "maturegapers.com",
+      "maturegynoexam.com",
+      "maturegynospy.com",
+      "nastypublicsex.com",
+      "oldsfuckdolls.com"
+    ]
+  }
+}

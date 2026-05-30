@@ -1,0 +1,27 @@
+{
+  "id": "cove.community.scrapers.yaml.missav-jp",
+  "name": "MissAV (jp)",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MissAV (jp).",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/missav-jp.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.missav.ai",
+      "*.missav.live",
+      "*.missav.ws",
+      "missav.ai",
+      "missav.live",
+      "missav.ws"
+    ]
+  }
+}

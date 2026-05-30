@@ -1,9 +1,8 @@
 {
-  "id": "cove.official.scrapers.yaml-video",
+  "id": "cove.community.scrapers.yaml-video",
   "name": "YAML Video Scrapers",
   "version": "1.0.0",
   "description": "Installable YAML metadata scrapers for video sites.",
-  "author": "Cove Team",
   "url": "https://github.com/yourcove/communityscrapers",
   "kind": "scraper-pack",
   "minCoveVersion": "0.0.16",

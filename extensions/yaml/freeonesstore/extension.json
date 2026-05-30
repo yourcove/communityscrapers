@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.freeonesstore",
+  "name": "FreeonesStore",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for FreeonesStore.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/freeonesstore.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.freeones.com",
+      "store.freeones.com"
+    ]
+  }
+}

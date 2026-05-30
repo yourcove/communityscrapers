@@ -1,0 +1,30 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/EricJohnsSexAdventures.yml
+name: EricJohnsSexAdventures
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - ericjohnssexadventures.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //h2[@class="section-title"]
+      Performers:
+        Name: //li/a/span
+      Details:
+        selector: //h3[contains(text(),"Description:")]/following-sibling::text()
+      Tags:
+        Name: //ul[@class="tags"]/li/a
+      Image:
+        selector: //img[@class="update_thumb thumbs stdimage"]/@src0_1x
+        postProcess:
+          - replace:
+              - regex: ^
+                with: "https://ericjohnssexadventures.com"
+      Studio:
+        Name:
+          fixed: EricJohnsSexAdventures
+# Last Updated July 01, 2021

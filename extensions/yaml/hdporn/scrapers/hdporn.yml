@@ -1,0 +1,28 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/HDPorn.yml
+name: "HDPorn"
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - hdporn.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //h1
+      Details: //span[@class="desc"]/p
+      Performers:
+        Name: //li/span/a
+      Image:
+        selector: //div[@class="video_image"]/@style
+        postProcess:
+          - replace:
+              - regex: ^.+?url\('([^']+).+
+                with: http://hdporn.com/$1
+      Tags:
+        Name: //div[@class="tagLinks"]/span/a
+      Studio:
+        Name:
+          fixed: "HD Porn"
+# Last Updated March 23, 2024

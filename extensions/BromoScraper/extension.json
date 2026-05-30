@@ -1,0 +1,11 @@
+{
+  "id": "cove.community.scrapers.bromo",
+  "name": "Bromo Scraper",
+  "version": "1.0.0",
+  "description": "Extracts scene, performer, gallery, and group metadata from Bromo pages.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "minCoveVersion": "0.0.16",
+  "entryDll": "BromoScraper.dll",
+  "categories": ["scraper", "metadata", "video"],
+  "permissions": { "network": ["bromo.com", "www.bromo.com", "site-api.project1service.com"] }
+}

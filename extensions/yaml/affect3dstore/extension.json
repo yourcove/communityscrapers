@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.affect3dstore",
+  "name": "Affect3DStore",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Affect3DStore.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/affect3dstore.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.affect3dstore.com",
+      "affect3dstore.com"
+    ]
+  }
+}

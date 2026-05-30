@@ -1,0 +1,26 @@
+{
+  "id": "cove.community.scrapers.yaml.bang",
+  "name": "Bang",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Bang.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/bang.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.bang.com",
+      "*.bangpremium.com",
+      "bang.com",
+      "bangpremium.com",
+      "www.bang.com"
+    ]
+  }
+}

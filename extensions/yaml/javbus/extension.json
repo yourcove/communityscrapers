@@ -1,0 +1,31 @@
+{
+  "id": "cove.community.scrapers.yaml.javbus",
+  "name": "Javbus",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Javbus.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/javbus.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.cdnbus.lol",
+      "*.dmmbus.lol",
+      "*.javbus.com",
+      "*.seedmm.cfd",
+      "*.seejav.bid",
+      "www.cdnbus.lol",
+      "www.dmmbus.lol",
+      "www.javbus.com",
+      "www.seedmm.cfd",
+      "www.seejav.bid"
+    ]
+  }
+}

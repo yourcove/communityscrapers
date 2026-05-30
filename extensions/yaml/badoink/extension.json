@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.badoink",
+  "name": "BaDoink",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BaDoink.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/badoink.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.badoinkvr.com",
+      "badoinkvr.com"
+    ]
+  }
+}

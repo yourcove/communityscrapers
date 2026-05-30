@@ -1,0 +1,42 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/NastyDaddy.yml
+name: NastyDaddy
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - nastydaddy.com
+    scraper: sceneScraper
+
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: 
+        selector: //title
+        postProcess:
+          - replace:
+              - regex: '-[^-]+$'
+                with: ''
+      Details: //div[@class='video-seo-description']/p
+      Image: 
+        selector: //base/@href | //video/@poster
+        concat: '__'
+        postProcess:
+          - replace:
+            - regex: '/tour/__/tour'
+              with: '/tour'
+      Studio:
+        Name: 
+          selector: //title
+          postProcess:
+            - replace:
+                - regex: '^.+[^-]-\s?'
+                  with: ''
+      Tags:
+        Name:
+          selector: //a[contains(@href,'/categories/')]/span
+      Performers:
+        Name:
+          selector: //span[@class="update_models"]/a
+
+# Last Updated May 16, 2025

@@ -1,5 +1,5 @@
 {
-  "id": "cove.official.scrapers.reddit",
+  "id": "cove.community.scrapers.reddit",
   "name": "Reddit Scraper",
   "version": "1.0.0",
   "description": "Extracts metadata from Reddit posts and Redgifs links.",

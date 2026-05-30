@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.sexbabesvr",
+  "name": "SexBabesVR",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for SexBabesVR.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/sexbabesvr.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.sexbabesvr.com",
+      "sexbabesvr.com"
+    ]
+  }
+}

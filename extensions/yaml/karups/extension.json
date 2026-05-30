@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.karups",
+  "name": "Karups",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Karups.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/karups.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.karups.com",
+      "karups.com"
+    ]
+  }
+}

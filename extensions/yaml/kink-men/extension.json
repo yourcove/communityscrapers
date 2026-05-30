@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.kink-men",
+  "name": "Kink Men",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Kink Men.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/kink-men.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.kinkmen.com",
+      "www.kinkmen.com"
+    ]
+  }
+}

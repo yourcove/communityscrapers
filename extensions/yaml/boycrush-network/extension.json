@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.boycrush-network",
+  "name": "BoyCrush Network",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BoyCrush Network.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/boycrush-network.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.baretwinks.com",
+      "*.boycrush.com",
+      "tour.baretwinks.com",
+      "tour.boycrush.com"
+    ]
+  }
+}

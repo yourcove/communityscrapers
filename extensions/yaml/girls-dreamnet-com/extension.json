@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.girls-dreamnet-com",
+  "name": "Girls.Dreamnet.com",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Girls.Dreamnet.com.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/girls-dreamnet-com.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.dreamnet.com",
+      "girls.dreamnet.com"
+    ]
+  }
+}

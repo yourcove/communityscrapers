@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.meanworld",
+  "name": "MeanWorld",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MeanWorld.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/meanworld.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.meanworld.com",
+      "megasite.meanworld.com"
+    ]
+  }
+}

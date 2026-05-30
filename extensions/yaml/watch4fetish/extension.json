@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.watch4fetish",
+  "name": "Watch4Fetish",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Watch4Fetish.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/watch4fetish.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.watch4fetish.com",
+      "watch4fetish.com"
+    ]
+  }
+}

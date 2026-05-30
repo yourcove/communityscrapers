@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.tenshigao",
+  "name": "Tenshigao",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Tenshigao.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/tenshigao.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.tenshigao.com",
+      "tenshigao.com"
+    ]
+  }
+}

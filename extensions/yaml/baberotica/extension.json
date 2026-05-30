@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.baberotica",
+  "name": "Baberotica",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Baberotica.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/baberotica.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.hamezo.com",
+      "hamezo.com"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.javhd",
+  "name": "JavHD",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for JavHD.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/javhd.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.javhd.com",
+      "javhd.com"
+    ]
+  }
+}

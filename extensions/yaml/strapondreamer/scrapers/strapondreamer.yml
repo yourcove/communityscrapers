@@ -1,0 +1,24 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/StraponDreamer.yml
+name: StraponDreamer
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - strapondreamer.com/videos
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //h1
+      Image:
+        selector: //script[contains(., "coverSlider.init(")]
+        postProcess:
+          - replace:
+              - regex: '.+coverSlider\.init\(\"(.+?)\"\,.+$'
+                with: $1/slide_1.jpg
+      Details: //span[@id="movieDescription"]
+      Studio:
+        Name:
+          fixed: Strapon Dreamer
+# Last Updated November 09, 2021

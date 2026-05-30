@@ -1,0 +1,43 @@
+{
+  "id": "cove.community.scrapers.yaml.marsmedia",
+  "name": "MarsMedia",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for MarsMedia.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/marsmedia.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.barebackcumpigs.com",
+      "*.barebackthathole.com",
+      "*.bearfilms.com",
+      "*.breedmeraw.com",
+      "*.bringmeaboy.com",
+      "*.bulldogpit.com",
+      "*.hairyandraw.com",
+      "*.hardbritlads.com",
+      "*.southernstrokes.com",
+      "*.touchthatboy.com",
+      "*.twinksinshorts.com",
+      "barebackcumpigs.com",
+      "barebackthathole.com",
+      "bearfilms.com",
+      "breedmeraw.com",
+      "bringmeaboy.com",
+      "bulldogpit.com",
+      "hairyandraw.com",
+      "hardbritlads.com",
+      "southernstrokes.com",
+      "touchthatboy.com",
+      "twinksinshorts.com"
+    ]
+  }
+}

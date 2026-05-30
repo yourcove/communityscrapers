@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.toaxxx",
+  "name": "TOAXXX",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for TOAXXX.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/toaxxx.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.breastsinpain.com",
+      "*.toaxxx.com",
+      "breastsinpain.com",
+      "toaxxx.com"
+    ]
+  }
+}

@@ -3,12 +3,7 @@ name: Build and Release Scrapers
 on:
   push:
     tags:
-      - 'common/v*'
-      - 'common-audio/v*'
-      - 'common-text/v*'
-      - 'reddit/v*'
-      - 'ytdlp/v*'
-      - 'yaml-video/v*'
+      - '**/v*'
   pull_request:
     branches: [main]
 

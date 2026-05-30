@@ -14,8 +14,8 @@ namespace Cove.Extensions.CommunityScrapers;
 
 public sealed class YtDlpScraperExtension : IScraperProvider
 {
-    private const string ExtensionId = "cove.official.scrapers.ytdlp";
-    private const string SceneScraperId = "cove.official.scrapers.ytdlp/scene-metadata";
+    private const string ExtensionId = "cove.community.scrapers.ytdlp";
+    private const string SceneScraperId = "cove.community.scrapers.ytdlp/scene-metadata";
 
     private static readonly ScraperDescriptor SceneScraper = new(
         SceneScraperId,
@@ -23,7 +23,8 @@ public sealed class YtDlpScraperExtension : IScraperProvider
         ScraperEntity.Scene,
         ScraperCapabilities.ByUrl | ScraperCapabilities.ByFragment,
         ["https://*/*", "http://*/*"],
-        ScraperRiskLevel.NetworkOnly);
+        ScraperRiskLevel.NetworkOnly,
+        ["pornhub.com", "redgifs.com", "redgif.com", "reddit.com", "redd.it", "xvideos.com"]);
 
     private IYtDlpCommandRunner? _runner;
     private IServiceProvider? _services;
@@ -76,7 +77,10 @@ public sealed class YtDlpScraperExtension : IScraperProvider
             return null;
 
         var info = await TryGetMediaInfoAsync(targetUrl, ct);
-        return info?.HasVideo == true ? info.SceneMetadata : null;
+        if (!info.HasVideo)
+            throw new InvalidOperationException("yt-dlp extracted metadata for the URL, but did not find a video stream to map to a scene.");
+
+        return info.SceneMetadata;
     }
 
     public interface IYtDlpCommandRunner
@@ -120,15 +124,15 @@ public sealed class YtDlpScraperExtension : IScraperProvider
         }
     }
 
-    private async Task<YtDlpMediaInfo?> TryGetMediaInfoAsync(string url, CancellationToken ct)
+    private async Task<YtDlpMediaInfo> TryGetMediaInfoAsync(string url, CancellationToken ct)
     {
         try
         {
             return await GetMediaInfoAsync(url, ct);
         }
-        catch
+        catch (Exception ex)
         {
-            return null;
+            throw new InvalidOperationException($"yt-dlp metadata scrape failed: {ex.Message}", ex);
         }
     }
 

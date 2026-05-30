@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.giga",
+  "name": "GIGA",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for GIGA.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/giga.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.akiba-web.com",
+      "akiba-web.com",
+      "www.akiba-web.com"
+    ]
+  }
+}

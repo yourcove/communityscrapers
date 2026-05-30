@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.asianstreetmeat",
+  "name": "AsianStreetMeat",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AsianStreetMeat.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/asianstreetmeat.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.asianstreetmeat.com",
+      "asianstreetmeat.com"
+    ]
+  }
+}

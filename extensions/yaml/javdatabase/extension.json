@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.javdatabase",
+  "name": "JAVDatabase",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for JAVDatabase.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/javdatabase.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.javdatabase.com",
+      "javdatabase.com",
+      "www.javdatabase.com"
+    ]
+  }
+}

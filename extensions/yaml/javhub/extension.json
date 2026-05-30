@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.javhub",
+  "name": "JavHub",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for JavHub.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/javhub.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.javhub.com",
+      "javhub.com",
+      "tour.javhub.com"
+    ]
+  }
+}

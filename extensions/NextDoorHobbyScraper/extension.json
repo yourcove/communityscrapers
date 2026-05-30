@@ -1,0 +1,11 @@
+{
+  "id": "cove.community.scrapers.nextdoorhobby",
+  "name": "NextDoorHobby Scraper",
+  "version": "1.0.0",
+  "description": "Extracts scene, performer, gallery, and group metadata from NextDoorHobby pages.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "minCoveVersion": "0.0.16",
+  "entryDll": "NextDoorHobbyScraper.dll",
+  "categories": ["scraper", "metadata", "video"],
+  "permissions": { "network": ["nextdoorhobby.com", "www.nextdoorhobby.com", "site-api.project1service.com"] }
+}

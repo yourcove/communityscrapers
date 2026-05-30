@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "validate:extensions": "node scripts/validate-extension-repo.mjs"
+    "validate:extensions": "node scripts/validate-extension-repo.mjs",
+    "scrapers:gen": "node scripts/generate-yaml-scraper.mjs",
+    "registry:gen": "node scripts/generate-registry-entries.mjs",
+    "scrapers:smoke": "dotnet run --project tests/Cove.Yaml.Scrapers.SmokeRunner/Cove.Yaml.Scrapers.SmokeRunner.csproj --"
   }
 }

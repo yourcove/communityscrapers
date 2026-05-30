@@ -1,0 +1,33 @@
+{
+  "id": "cove.community.scrapers.yaml.trans500",
+  "name": "Trans500",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Trans500.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/trans500.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.behindtrans500.com",
+      "*.ikillitts.com",
+      "*.superramon.com",
+      "*.trans500.com",
+      "*.transatplay.com",
+      "*.tsgirlfriendexperience.com",
+      "behindtrans500.com",
+      "ikillitts.com",
+      "superramon.com",
+      "trans500.com",
+      "transatplay.com",
+      "tsgirlfriendexperience.com"
+    ]
+  }
+}

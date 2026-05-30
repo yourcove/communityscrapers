@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.girlsrimming",
+  "name": "GirlsRimming",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for GirlsRimming.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/girlsrimming.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.girlsrimming.com",
+      "girlsrimming.com"
+    ]
+  }
+}

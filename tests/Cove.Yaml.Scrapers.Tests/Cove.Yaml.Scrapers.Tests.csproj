@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Integration tests for the YAML scraper packs in this repo.
+    These exercise Cove's real ScraperService engine against the actual
+    extensions/yaml/<id>/ files, so they require a sibling checkout of the
+    Cove repository at ..\..\..\cove (i.e. repos\cove next to repos\communityscrapers).
+    The tests do NOT live in the Cove repo so that Cove's own test suite does
+    not depend on these extensions.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <!-- Test host does not need to be a dynamically-loadable Cove component. -->
+    <EnableDynamicLoading>false</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\extensions\BlackMaleMeScraper\BlackMaleMeScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\BromoScraper\BromoScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\ErotikScraper\ErotikScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\FaKingsScraper\FaKingsScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\MadLifesScraper\MadLifesScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\NextDoorHobbyScraper\NextDoorHobbyScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\PepePornScraper\PepePornScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\PornhubScraper\PornhubScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\SeanCodyScraper\SeanCodyScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\Tube8VipScraper\Tube8VipScraper.csproj" />
+    <ProjectReference Include="..\..\extensions\WhyNotBiScraper\WhyNotBiScraper.csproj" />
+    <ProjectReference Include="..\..\..\cove\src\Cove.Api\Cove.Api.csproj" />
+    <ProjectReference Include="..\..\..\cove\src\Cove.Core\Cove.Core.csproj" />
+    <ProjectReference Include="..\..\..\cove\src\Cove.Plugins\Cove.Plugins.csproj" />
+  </ItemGroup>
+
+</Project>

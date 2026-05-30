@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.insexol",
+  "name": "insexOL",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for insexOL.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/insexol.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.paintoy.com",
+      "*.sensualpain.com",
+      "paintoy.com",
+      "sensualpain.com"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.lethalpass",
+  "name": "lethalpass",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for lethalpass.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/lethalpass.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.lethalpass.com",
+      "lethalpass.com"
+    ]
+  }
+}

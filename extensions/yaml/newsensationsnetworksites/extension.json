@@ -1,0 +1,51 @@
+{
+  "id": "cove.community.scrapers.yaml.newsensationsnetworksites",
+  "name": "NewSensationsNetworkSites",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for NewSensationsNetworkSites.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/newsensationsnetworksites.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.ashlynnbrooke.com",
+      "*.familyxxx.com",
+      "*.fourfingerclub.com",
+      "*.freshoutofhighschool.com",
+      "*.girlgirlxxx.com",
+      "*.heavyhandfuls.com",
+      "*.hotwifexxx.com",
+      "*.jizzbomb.com",
+      "*.newsensations.com",
+      "*.parodypass.com",
+      "*.shanedieselsbanginbabes.com",
+      "*.stretchedoutsnatch.com",
+      "*.thelesbianexperience.com",
+      "*.thetabutales.com",
+      "*.unlimitedmilfs.com",
+      "ashlynnbrooke.com",
+      "familyxxx.com",
+      "fourfingerclub.com",
+      "freshoutofhighschool.com",
+      "girlgirlxxx.com",
+      "heavyhandfuls.com",
+      "hotwifexxx.com",
+      "jizzbomb.com",
+      "newsensations.com",
+      "parodypass.com",
+      "shanedieselsbanginbabes.com",
+      "stretchedoutsnatch.com",
+      "thelesbianexperience.com",
+      "thetabutales.com",
+      "unlimitedmilfs.com"
+    ]
+  }
+}

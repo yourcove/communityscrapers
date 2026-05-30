@@ -1,0 +1,17 @@
+{
+  "id": "cove.community.scrapers.yaml.rule34-us",
+  "name": "rule34-us",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for rule34-us.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/rule34-us.yml"
+  ]
+}

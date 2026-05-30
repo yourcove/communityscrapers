@@ -1,0 +1,39 @@
+{
+  "id": "cove.community.scrapers.yaml.vivid",
+  "name": "Vivid",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Vivid.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/vivid.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.65inchhugeasses.com",
+      "*.blackwhitefuckfest.com",
+      "*.brandnewfaces.com",
+      "*.girlswhofuckgirls.com",
+      "*.momisamilf.com",
+      "*.nastystepfamily.com",
+      "*.orgytrain.com",
+      "*.petited.com",
+      "*.vividclassic.com",
+      "65inchhugeasses.com",
+      "blackwhitefuckfest.com",
+      "brandnewfaces.com",
+      "girlswhofuckgirls.com",
+      "momisamilf.com",
+      "nastystepfamily.com",
+      "orgytrain.com",
+      "petited.com",
+      "vividclassic.com"
+    ]
+  }
+}

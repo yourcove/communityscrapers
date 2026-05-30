@@ -1,0 +1,37 @@
+{
+  "id": "cove.community.scrapers.yaml.insex",
+  "name": "insex",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for insex.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/insex.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.hardtied.com",
+      "*.infernalrestraints.com",
+      "*.insex.com",
+      "*.insexondemand.com",
+      "*.realtimebondage.com",
+      "*.renderfiend.com",
+      "*.sexuallybroken.com",
+      "*.topgrl.com",
+      "hardtied.com",
+      "infernalrestraints.com",
+      "insex.com",
+      "insexondemand.com",
+      "realtimebondage.com",
+      "renderfiend.com",
+      "sexuallybroken.com",
+      "topgrl.com"
+    ]
+  }
+}

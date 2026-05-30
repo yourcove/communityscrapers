@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.fotoro-cuffed",
+  "name": "FoToRo Cuffed",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for FoToRo Cuffed.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/fotoro-cuffed.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.cuffedinuniform.com",
+      "*.cuffedoutdoors.com",
+      "cuffedinuniform.com",
+      "cuffedoutdoors.com"
+    ]
+  }
+}

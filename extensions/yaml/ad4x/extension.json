@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.ad4x",
+  "name": "AD4X",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for AD4X.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/ad4x.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.ad4x.com",
+      "ad4x.com"
+    ]
+  }
+}

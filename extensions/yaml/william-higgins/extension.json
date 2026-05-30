@@ -1,0 +1,33 @@
+{
+  "id": "cove.community.scrapers.yaml.william-higgins",
+  "name": "William Higgins",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for William Higgins.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/william-higgins.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.ambushmassage.com",
+      "*.cfnmeu.com",
+      "*.malefeet4u.com",
+      "*.str8hell.com",
+      "*.swnude.com",
+      "*.williamhiggins.com",
+      "ambushmassage.com",
+      "cfnmeu.com",
+      "malefeet4u.com",
+      "str8hell.com",
+      "swnude.com",
+      "williamhiggins.com"
+    ]
+  }
+}

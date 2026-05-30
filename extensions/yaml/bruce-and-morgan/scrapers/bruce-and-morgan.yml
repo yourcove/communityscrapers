@@ -1,0 +1,23 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/bruceandmorgan.yml
+name: Bruce and Morgan
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - bruceandmorgan.net/scene/
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //div[@class='title']/h2/span/text()
+      Details: //h3[@class='full-desc']/span/text()
+      Tags:
+        Name: //h4[@class='tags content-info']/span/a/span/text()
+      Studio:
+        Name:
+          fixed: Bruce and Morgan
+driver:
+  useCDP: true
+# Last Updated October 23, 2020

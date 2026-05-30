@@ -1,0 +1,24 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/privatecastings.yml
+name: privatecastings
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - privatecastings.com/scene/
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //h1
+      Performers:
+        Name: //ul[@class="scene-models-list"]//a
+      Details: //div[@class="content-desc"]/div/p
+      Tags:
+        Name: //ul[@class="scene-tags"]//li
+      Image: //meta[@itemprop="thumbnailUrl"]/@content
+      Studio:
+        Name:
+          fixed: PrivateCastings
+# Last Updated February 24, 2021

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.mood-x",
+  "name": "Mood X",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Mood X.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/mood-x.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.moodx.tv",
+      "moodx.tv"
+    ]
+  }
+}

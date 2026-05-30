@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.bondagecafe",
+  "name": "BondageCafe",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BondageCafe.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/bondagecafe.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.bondagecafe.com",
+      "bondagecafe.com"
+    ]
+  }
+}

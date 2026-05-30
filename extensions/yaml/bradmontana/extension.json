@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.bradmontana",
+  "name": "BradMontana",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BradMontana.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/bradmontana.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.bradmontana.com",
+      "bradmontana.com"
+    ]
+  }
+}

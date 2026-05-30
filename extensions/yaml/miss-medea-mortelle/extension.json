@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.miss-medea-mortelle",
+  "name": "Miss Medea Mortelle",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Miss Medea Mortelle.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/miss-medea-mortelle.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.missmortelle.com",
+      "missmortelle.com"
+    ]
+  }
+}

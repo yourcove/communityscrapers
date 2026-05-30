@@ -1,0 +1,24 @@
+{
+  "id": "cove.community.scrapers.yaml.babestationtv",
+  "name": "BabestationTV",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for BabestationTV.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/babestationtv.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.babestation.tv",
+      "babestation.tv",
+      "www.babestation.tv"
+    ]
+  }
+}

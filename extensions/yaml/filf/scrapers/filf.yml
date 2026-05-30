@@ -1,0 +1,27 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/FILF.yml
+name: "FILF"
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - filf.com/profil/
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //h1[@class="title"]/text()
+      Details: //p[@class="description"]/text()
+      Performers:
+        Name: //div[@class="name-ctn"]/span/text()
+      Image: 
+        selector: //img[@class="scene-img"]/@src
+        postProcess:
+            - replace:
+                - regex: ^
+                  with: "https:"
+      Studio:
+        Name: 
+            fixed: FILF
+
+# Last Updated July 25, 2020

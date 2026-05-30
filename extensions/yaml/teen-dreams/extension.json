@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.teen-dreams",
+  "name": "Teen Dreams",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Teen Dreams.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/teen-dreams.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.teen-depot.com",
+      "*.teendreams.com",
+      "teen-depot.com",
+      "teendreams.com"
+    ]
+  }
+}

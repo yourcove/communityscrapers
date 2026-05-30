@@ -1,0 +1,49 @@
+{
+  "id": "cove.community.scrapers.yaml.bellapass",
+  "name": "bellapass",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for bellapass.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/bellapass.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.alexismonroe.com",
+      "*.avadawn.com",
+      "*.bellahd.com",
+      "*.bellanextdoor.com",
+      "*.bellapass.com",
+      "*.bryci.com",
+      "*.calicarter.com",
+      "*.hd19.com",
+      "*.hunterleigh.com",
+      "*.janafox.com",
+      "*.joeperv.com",
+      "*.katiebanks.com",
+      "*.monroelee.com",
+      "*.taliashepard.com",
+      "alexismonroe.com",
+      "avadawn.com",
+      "bellahd.com",
+      "bellanextdoor.com",
+      "bellapass.com",
+      "bryci.com",
+      "calicarter.com",
+      "hd19.com",
+      "hunterleigh.com",
+      "janafox.com",
+      "joeperv.com",
+      "katiebanks.com",
+      "monroelee.com",
+      "taliashepard.com"
+    ]
+  }
+}

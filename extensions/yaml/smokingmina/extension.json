@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.smokingmina",
+  "name": "SmokingMina",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for SmokingMina.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/smokingmina.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.smokingmina.com",
+      "smokingmina.com"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.10musume",
+  "name": "10Musume",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for 10Musume.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/10musume.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.10musume.com",
+      "en.10musume.com"
+    ]
+  }
+}

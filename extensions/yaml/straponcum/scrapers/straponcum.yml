@@ -1,0 +1,33 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/StrapOnCum.yml
+name: StrapOnCum
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - straponcum.com
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title:
+        selector: //h1[@class="card-title"]
+      Date:
+        selector: //p[@class="card-text text-muted"]
+        postProcess:
+          - replace:
+              - regex: ^[^A-Za-z]+
+                with: ""
+          - parseDate: January 2, 2006
+      Performers:
+        Name: //p[@class="card-text d-inline-block"]/a
+      Tags:
+        Name: //li[@class="list-inline-item tag"]/a
+      Details:
+        selector: //p[@class="card-text mb-2"]
+      Image:
+        selector: //img[@class="stdimage img-fluid lazy"]/@data-src
+      Studio:
+        Name:
+          fixed: StrapOnCum
+# Last Updated May 20, 2021

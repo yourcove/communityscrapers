@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.puta-locura",
+  "name": "Puta Locura",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Puta Locura.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/puta-locura.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.putalocura.com",
+      "putalocura.com"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+# Ported from stashapp/CommunityScrapers (https://github.com/stashapp/CommunityScrapers/tree/master)
+# Licensed under AGPL-3.0. This file was modified/ported for use with Cove.
+# Upstream file: scrapers/toughlovex.yml
+name: toughlovex
+sceneByURL:
+  - action: scrapeXPath
+    url:
+      - toughlovex.com/view/
+    scraper: sceneScraper
+xPathScrapers:
+  sceneScraper:
+    scene:
+      Title: //div[@class="title-wrap"]/h1/text()
+      Details: //div[@class="description"]/p/text()
+      Performers:
+        Name: //a[@class="thumb"]/img/@alt
+      Studio:
+        Name: 
+            fixed: ToughLoveX
+      Image: //video[@id="main-player"]/@poster
+
+# Last Updated August 07, 2020

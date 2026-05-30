@@ -1,0 +1,25 @@
+{
+  "id": "cove.community.scrapers.yaml.oldje",
+  "name": "Oldje",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for Oldje.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/oldje.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.oldje-3some.com",
+      "*.oldje.com",
+      "oldje-3some.com",
+      "oldje.com"
+    ]
+  }
+}

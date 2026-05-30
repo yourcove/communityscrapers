@@ -1,0 +1,23 @@
+{
+  "id": "cove.community.scrapers.yaml.houseofgord",
+  "name": "HouseOfGord",
+  "version": "1.0.0",
+  "description": "YAML metadata scraper for HouseOfGord.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "kind": "scraper-pack",
+  "minCoveVersion": "0.0.16",
+  "categories": [
+    "scraper",
+    "metadata",
+    "yaml-scraper"
+  ],
+  "scraperFiles": [
+    "scrapers/houseofgord.yml"
+  ],
+  "permissions": {
+    "network": [
+      "*.houseofgord.com",
+      "houseofgord.com"
+    ]
+  }
+}
