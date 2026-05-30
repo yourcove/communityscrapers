@@ -9,17 +9,10 @@ Community-maintained scraper extensions published through the official Cove exte
 - `cove.community.scrapers.common-text` - Literotica story metadata extraction.
 - `cove.community.scrapers.reddit` - Reddit and Redgifs metadata extraction.
 - `cove.community.scrapers.ytdlp` - generic scene metadata extraction through `yt-dlp`.
-- `cove.community.scrapers.yaml-video` - installable YAML scraper pack for video sites.
 
 ## YAML Scrapers
 
 YAML scraper files live in `extensions/YamlVideoScrapers/scrapers/` and are shipped as a registry-installable scraper pack.
-
-- `Pornhub.yml` - local YAML scraper source preserved from `%LocalAppData%\cove\scrapers`.
-- `Xvideos.yml` - local YAML scraper source preserved from `%LocalAppData%\cove\scrapers`.
-
-The pack uses `kind: "scraper-pack"`, has no DLL, and is enabled, disabled,
-updated, and uninstalled through the same registry flow as compiled extensions.
 
 ## Development
 
@@ -42,6 +35,5 @@ Each extension has its own release tag prefix:
 - `common-text/v1.0.0`
 - `reddit/v1.0.0`
 - `ytdlp/v1.0.0`
-- `yaml-video/v1.0.0`
 
 The workflow packages only the tagged extension and uploads a zip named `<extension-id>-<version>.zip` for the registry.
