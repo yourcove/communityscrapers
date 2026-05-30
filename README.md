@@ -5,21 +5,26 @@ Community-maintained scraper extensions published through the official Cove exte
 ## Extensions
 
 - `cove.community.scrapers` - manifest-only bundle that installs the common scraper set.
+- `cove.community.scrapers.blackmaleme` - Black Male Me metadata extraction.
+- `cove.community.scrapers.bromo` - Bromo metadata extraction.
 - `cove.community.scrapers.common-audio` - Soundgasm and Whyp audio metadata extraction.
 - `cove.community.scrapers.common-text` - Literotica story metadata extraction.
+- `cove.community.scrapers.erotik` - Erotik group metadata extraction.
+- `cove.community.scrapers.fakings` - FaKings metadata extraction.
+- `cove.community.scrapers.madlifes` - MadLifes metadata extraction.
+- `cove.community.scrapers.nextdoorhobby` - Next Door Hobby metadata extraction.
+- `cove.community.scrapers.pepeporn` - PepePorn metadata extraction.
+- `cove.community.scrapers.pornhub` - Pornhub metadata extraction.
 - `cove.community.scrapers.reddit` - Reddit and Redgifs metadata extraction.
+- `cove.community.scrapers.seancody` - Sean Cody metadata extraction.
+- `cove.community.scrapers.tube8vip` - Tube8VIP metadata extraction.
+- `cove.community.scrapers.whynotbi` - Why Not Bi metadata extraction.
 - `cove.community.scrapers.ytdlp` - generic scene metadata extraction through `yt-dlp`.
-- `cove.community.scrapers.yaml-video` - installable YAML scraper pack for video sites.
 
 ## YAML Scrapers
 
-YAML scraper files live in `extensions/YamlVideoScrapers/scrapers/` and are shipped as a registry-installable scraper pack.
-
-- `Pornhub.yml` - local YAML scraper source preserved from `%LocalAppData%\cove\scrapers`.
-- `Xvideos.yml` - local YAML scraper source preserved from `%LocalAppData%\cove\scrapers`.
-
-The pack uses `kind: "scraper-pack"`, has no DLL, and is enabled, disabled,
-updated, and uninstalled through the same registry flow as compiled extensions.
+Generated YAML scraper packs live under `extensions/yaml/`. Each generated pack uses
+`kind: "scraper-pack"`, has no DLL, and is installed from source through the registry.
 
 ## Development
 
@@ -35,13 +40,6 @@ dotnet build extensions/YtDlpScraper/YtDlpScraper.csproj
 
 ## Releases
 
-Each extension has its own release tag prefix:
+Create release tags with the lowercase `tagPrefix` from `extensions/catalog.json`, for example `common/v1.0.0` or `pornhub/v1.0.0`.
 
-- `common/v1.0.0`
-- `common-audio/v1.0.0`
-- `common-text/v1.0.0`
-- `reddit/v1.0.0`
-- `ytdlp/v1.0.0`
-- `yaml-video/v1.0.0`
-
-The workflow packages only the tagged extension and uploads a zip named `<extension-id>-<version>.zip` for the registry.
+The workflow accepts any `<tagPrefix>v<semver>` tag, packages only the matching catalog entry, and uploads a zip named `<extension-id>-<version>.zip` for the registry.

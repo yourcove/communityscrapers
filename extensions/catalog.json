@@ -97,14 +97,6 @@
       "id": "cove.community.scrapers.ytdlp",
       "path": "extensions/YtDlpScraper",
       "tagPrefix": "ytdlp/"
-    },
-    {
-      "name": "YamlVideoScrapers",
-      "id": "cove.community.scrapers.yaml-video",
-      "path": "extensions/YamlVideoScrapers",
-      "tagPrefix": "yaml-video/",
-      "manifestOnly": true,
-      "contentOnly": true
     }
   ]
 }

@@ -12,7 +12,6 @@
     "cove.community.scrapers.common-audio": ">=1.0.0",
     "cove.community.scrapers.common-text": ">=1.0.0",
     "cove.community.scrapers.reddit": ">=1.0.0",
-    "cove.community.scrapers.ytdlp": ">=1.0.0",
-    "cove.community.scrapers.yaml-video": ">=1.0.0"
+    "cove.community.scrapers.ytdlp": ">=1.0.0"
   }
 }
