@@ -3,3 +3,4 @@
 artifacts/
 *.zip
 .DS_Store
+/docs/**
