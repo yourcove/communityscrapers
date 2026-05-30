@@ -5,6 +5,7 @@ import process from "node:process";
 const root = path.resolve(import.meta.dirname, "..");
 const catalogPath = path.join(root, "extensions", "catalog.json");
 const errors = [];
+const SUPPORTED_POST_PROCESS_STEPS = new Set(["replace", "parsedate", "map", "feettocm", "lbtokg"]);
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, ""));
@@ -75,6 +76,50 @@ function findFiles(directory, predicate) {
   }
 
   return results;
+}
+
+function findUnsupportedPostProcessSteps(content) {
+  const unsupported = new Set();
+  const lines = content.split(/\r?\n/);
+  let inPostProcess = false;
+  let postProcessIndent = 0;
+  let stepIndent = null;
+
+  for (const rawLine of lines) {
+    const line = rawLine.replace(/#.*$/, "");
+    const trimmed = line.trim();
+    const indent = line.length - line.trimStart().length;
+
+    if (!inPostProcess) {
+      if (/^postProcess:\s*$/.test(trimmed)) {
+        inPostProcess = true;
+        postProcessIndent = indent;
+        stepIndent = null;
+      }
+      continue;
+    }
+
+    if (trimmed.length === 0) continue;
+    if (indent <= postProcessIndent) {
+      inPostProcess = false;
+      stepIndent = null;
+      if (/^postProcess:\s*$/.test(trimmed)) {
+        inPostProcess = true;
+        postProcessIndent = indent;
+      }
+      continue;
+    }
+
+    const item = trimmed.match(/^-\s*([A-Za-z][A-Za-z0-9_]*)\s*:/);
+    if (!item) continue;
+    if (stepIndent == null) stepIndent = indent;
+    if (indent !== stepIndent) continue;
+
+    const step = item[1].toLowerCase();
+    if (!SUPPORTED_POST_PROCESS_STEPS.has(step)) unsupported.add(item[1]);
+  }
+
+  return [...unsupported].sort((a, b) => a.localeCompare(b));
 }
 
 const catalog = readJson(catalogPath);
@@ -149,9 +194,103 @@ for (const entry of entries) {
   validateSettings(entry.id, manifest);
 }
 
+// Source-tracked YAML scraper packs live under extensions/yaml/<id>/ and are
+// auto-discovered (not part of catalog.json). They are unversioned and content-only:
+// Cove installs them directly from source, so they need no release zips or CI.
+const YAML_ID_PREFIX = "cove.community.scrapers.yaml.";
+const yamlScrapersRoot = path.join(root, "extensions", "yaml");
+
+function validateYamlScraperPack(folder) {
+  const extensionDir = path.join(yamlScrapersRoot, folder);
+  const manifestPath = path.join(extensionDir, "extension.json");
+  const label = `yaml/${folder}`;
+
+  if (!fs.existsSync(manifestPath)) {
+    errors.push(`${label}: missing extension.json`);
+    return;
+  }
+
+  const manifest = readJson(manifestPath);
+  const expectedId = `${YAML_ID_PREFIX}${folder}`;
+
+  if (manifest.id !== expectedId) errors.push(`${label}: id must be ${expectedId} (found ${manifest.id})`);
+  if (manifest.kind !== "scraper-pack") errors.push(`${label}: kind must be scraper-pack`);
+  if (manifest.entryDll) errors.push(`${label}: YAML scraper packs must not declare entryDll`);
+  if (!manifest.minCoveVersion) errors.push(`${label}: extension.json missing minCoveVersion`);
+  if (!manifest.url) errors.push(`${label}: extension.json missing url`);
+  if (!Array.isArray(manifest.categories) || manifest.categories.length === 0) {
+    errors.push(`${label}: extension.json missing categories`);
+  } else {
+    for (const category of manifest.categories) {
+      if (!isLowerKebab(category)) errors.push(`${label}: category must be lowercase kebab-case: ${category}`);
+    }
+  }
+
+  if (!Array.isArray(manifest.scraperFiles) || manifest.scraperFiles.length === 0) {
+    errors.push(`${label}: extension.json must list at least one scraperFiles entry`);
+    return;
+  }
+
+  for (const relative of manifest.scraperFiles) {
+    if (typeof relative !== "string" || relative.length === 0) {
+      errors.push(`${label}: scraperFiles entries must be non-empty strings`);
+      continue;
+    }
+    const normalized = relative.replace(/\\/g, "/");
+    if (normalized.startsWith("/") || normalized.includes("..")) {
+      errors.push(`${label}: scraperFiles entry must be a relative path inside the pack: ${relative}`);
+      continue;
+    }
+    if (![".yml", ".yaml"].includes(path.extname(normalized).toLowerCase())) {
+      errors.push(`${label}: scraperFiles entry must be a .yml or .yaml file: ${relative}`);
+      continue;
+    }
+    const filePath = path.join(extensionDir, normalized);
+    if (!fs.existsSync(filePath)) {
+      errors.push(`${label}: scraperFiles references a missing file: ${relative}`);
+      continue;
+    }
+    const content = fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, "");
+    if (!content.includes("stashapp/CommunityScrapers")) {
+      errors.push(`${label}: ${relative} is missing the required stashapp/CommunityScrapers attribution header`);
+    }
+    if (!/^name:\s*\S/m.test(content)) {
+      errors.push(`${label}: ${relative} is missing a top-level name:`);
+    }
+    if (/^\s*-?\s*action:\s*(script|stash)\s*$/m.test(content)) {
+      errors.push(`${label}: ${relative} uses action: script/stash; port it to a .NET scraper instead of a YAML pack`);
+    }
+    if (/^\s*-?\s*subScraper:\s*\S+/m.test(content)) {
+      errors.push(`${label}: ${relative} uses subScraper; Cove does not support that in YAML packs yet`);
+    }
+    const unsupportedPostProcesses = findUnsupportedPostProcessSteps(content);
+    if (unsupportedPostProcesses.length > 0) {
+      errors.push(`${label}: ${relative} uses unsupported postProcess step(s): ${unsupportedPostProcesses.join(", ")}`);
+    }
+  }
+
+  validateExternalDependencies(label, manifest);
+  validateSettings(label, manifest);
+}
+
+let yamlPackCount = 0;
+if (fs.existsSync(yamlScrapersRoot)) {
+  const yamlFolders = fs.readdirSync(yamlScrapersRoot, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name);
+
+  for (const folder of yamlFolders) {
+    yamlPackCount++;
+    const id = `${YAML_ID_PREFIX}${folder}`;
+    if (ids.has(id)) errors.push(`yaml/${folder}: id ${id} duplicates a catalog entry`);
+    ids.add(id);
+    validateYamlScraperPack(folder);
+  }
+}
+
 if (errors.length > 0) {
   for (const error of errors) console.error(`ERROR: ${error}`);
   process.exit(1);
 }
 
-console.log(`Validated ${entries.length} extension catalog entries.`);
+console.log(`Validated ${entries.length} extension catalog entries and ${yamlPackCount} YAML scraper pack(s).`);
