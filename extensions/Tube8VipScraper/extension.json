@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Extracts scene, performer, gallery, and group metadata from Tube8Vip pages.",
   "url": "https://github.com/yourcove/communityscrapers",
-  "minCoveVersion": "0.0.28",
+  "minCoveVersion": "0.0.32",
   "entryDll": "Tube8VipScraper.dll",
   "categories": [
     "scraper",

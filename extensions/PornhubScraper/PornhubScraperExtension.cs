@@ -14,15 +14,15 @@ namespace Cove.Extensions.CommunityScrapers;
 public sealed class PornhubScraperExtension : IScraperProvider
 {
     private const string ExtensionId = "cove.community.scrapers.pornhub";
-    private const string SceneScraperId = "cove.community.scrapers.pornhub/scene";
+    private const string VideoScraperId = "cove.community.scrapers.pornhub/video";
     private const string PerformerScraperId = "cove.community.scrapers.pornhub/performer";
 
     private static readonly string[] PornhubUrlPatterns = ["pornhub.com/*", "*.pornhub.com/*", "pornhub.org/*", "*.pornhub.org/*"];
 
-    private static readonly ScraperDescriptor SceneScraper = new(
-        SceneScraperId,
-        "Pornhub Scene",
-        ScraperEntity.Scene,
+    private static readonly ScraperDescriptor VideoScraper = new(
+        VideoScraperId,
+        "Pornhub Video",
+        ScraperEntity.Video,
         ScraperCapabilities.ByUrl | ScraperCapabilities.ByName | ScraperCapabilities.ByFragment | ScraperCapabilities.ByQueryFragment,
         PornhubUrlPatterns,
         ScraperRiskLevel.NetworkOnly,
@@ -58,29 +58,29 @@ public sealed class PornhubScraperExtension : IScraperProvider
         return Task.CompletedTask;
     }
 
-    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [SceneScraper, PerformerScraper];
+    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [VideoScraper, PerformerScraper];
 
-    public async Task<ScrapedSceneDto?> ScrapeSceneAsync(ScraperRequest<SceneScrapeInput> request, CancellationToken ct)
+    public async Task<ScrapedVideoDto?> ScrapeVideoAsync(ScraperRequest<VideoScrapeInput> request, CancellationToken ct)
     {
-        if (!string.Equals(request.ScraperId, SceneScraperId, StringComparison.OrdinalIgnoreCase))
+        if (!string.Equals(request.ScraperId, VideoScraperId, StringComparison.OrdinalIgnoreCase))
             return null;
 
-        var url = ResolveSceneUrl(request.Input);
+        var url = ResolveVideoUrl(request.Input);
         if (string.IsNullOrWhiteSpace(url) || !IsPornhubUrl(url))
             return null;
 
         var html = await GetStringAsync(url, ct);
-        return ParseScene(html, url);
+        return ParseVideo(html, url);
     }
 
-    public async Task<IReadOnlyList<ScrapedSceneDto>> SearchScenesAsync(ScraperRequest<string> request, CancellationToken ct)
+    public async Task<IReadOnlyList<ScrapedVideoDto>> SearchVideosAsync(ScraperRequest<string> request, CancellationToken ct)
     {
-        if (!string.Equals(request.ScraperId, SceneScraperId, StringComparison.OrdinalIgnoreCase) || string.IsNullOrWhiteSpace(request.Input))
+        if (!string.Equals(request.ScraperId, VideoScraperId, StringComparison.OrdinalIgnoreCase) || string.IsNullOrWhiteSpace(request.Input))
             return [];
 
         var url = $"https://www.pornhub.com/video/search?search={Uri.EscapeDataString(request.Input.Trim())}";
         var html = await GetStringAsync(url, ct);
-        return ParseSceneSearch(html).ToList();
+        return ParseVideoSearch(html).ToList();
     }
 
     public async Task<ScrapedPerformerDto?> ScrapePerformerAsync(ScraperRequest<PerformerScrapeInput> request, CancellationToken ct)
@@ -126,7 +126,7 @@ public sealed class PornhubScraperExtension : IScraperProvider
         => _services?.GetRequiredService<IHttpClientFactory>().CreateClient(Id)
             ?? throw new InvalidOperationException("The Pornhub scraper has not been initialized.");
 
-    private static ScrapedSceneDto? ParseScene(string html, string fallbackUrl)
+    private static ScrapedVideoDto? ParseVideo(string html, string fallbackUrl)
     {
         var title = ExtractElementText(html, "h1");
         if (string.Equals(title, "Recently Featured Porn Videos", StringComparison.OrdinalIgnoreCase))
@@ -151,9 +151,9 @@ public sealed class PornhubScraperExtension : IScraperProvider
             return null;
         }
 
-        return new ScrapedSceneDto
+        return new ScrapedVideoDto
         {
-            SourceScraperId = SceneScraperId,
+            SourceScraperId = VideoScraperId,
             Title = title,
             Urls = string.IsNullOrWhiteSpace(canonicalUrl) ? [] : [canonicalUrl],
             Date = date,
@@ -165,9 +165,9 @@ public sealed class PornhubScraperExtension : IScraperProvider
         };
     }
 
-    private static IReadOnlyList<ScrapedSceneDto> ParseSceneSearch(string html)
+    private static IReadOnlyList<ScrapedVideoDto> ParseVideoSearch(string html)
     {
-        var results = new List<ScrapedSceneDto>();
+        var results = new List<ScrapedVideoDto>();
         var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         foreach (Match match in Regex.Matches(html, @"(?is)<a\b[^>]*href\s*=\s*(['""'])(?<href>[^'""#]*view_video\.php\?viewkey=[^'""]+)\1[^>]*>(?<text>.*?)</a>"))
         {
@@ -176,9 +176,9 @@ public sealed class PornhubScraperExtension : IScraperProvider
                 continue;
 
             var title = CleanHtml(match.Groups["text"].Value);
-            results.Add(new ScrapedSceneDto
+            results.Add(new ScrapedVideoDto
             {
-                SourceScraperId = SceneScraperId,
+                SourceScraperId = VideoScraperId,
                 Title = string.IsNullOrWhiteSpace(title) ? OfficialDownloaderUtilities.DeriveTitleFromUrl(url, "Pornhub scene") : title,
                 Urls = [url],
                 Code = ExtractViewKey(url),
@@ -255,7 +255,7 @@ public sealed class PornhubScraperExtension : IScraperProvider
         }
     }
 
-    private static string? ResolveSceneUrl(SceneScrapeInput input)
+    private static string? ResolveVideoUrl(VideoScrapeInput input)
     {
         var url = input.Url ?? input.Urls.FirstOrDefault(IsPornhubUrl);
         if (!string.IsNullOrWhiteSpace(url))

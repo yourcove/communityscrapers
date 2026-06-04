@@ -15,12 +15,12 @@ namespace Cove.Extensions.CommunityScrapers;
 public sealed class YtDlpScraperExtension : IScraperProvider
 {
     private const string ExtensionId = "cove.community.scrapers.ytdlp";
-    private const string SceneScraperId = "cove.community.scrapers.ytdlp/scene-metadata";
+    private const string VideoScraperId = "cove.community.scrapers.ytdlp/video-metadata";
 
-    private static readonly ScraperDescriptor SceneScraper = new(
-        SceneScraperId,
-        "yt-dlp Scene Metadata",
-        ScraperEntity.Scene,
+    private static readonly ScraperDescriptor VideoScraper = new(
+        VideoScraperId,
+        "yt-dlp Video Metadata",
+        ScraperEntity.Video,
         ScraperCapabilities.ByUrl | ScraperCapabilities.ByFragment,
         ["https://*/*", "http://*/*"],
         ScraperRiskLevel.NetworkOnly,
@@ -65,22 +65,22 @@ public sealed class YtDlpScraperExtension : IScraperProvider
         return Task.CompletedTask;
     }
 
-    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [SceneScraper];
+    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [VideoScraper];
 
-    public async Task<ScrapedSceneDto?> ScrapeSceneAsync(ScraperRequest<SceneScrapeInput> request, CancellationToken ct)
+    public async Task<ScrapedVideoDto?> ScrapeVideoAsync(ScraperRequest<VideoScrapeInput> request, CancellationToken ct)
     {
-        if (!string.Equals(request.ScraperId, SceneScraper.Id, StringComparison.OrdinalIgnoreCase))
+        if (!string.Equals(request.ScraperId, VideoScraper.Id, StringComparison.OrdinalIgnoreCase))
             return null;
 
-        var targetUrl = ResolveSceneUrl(request.Input);
+        var targetUrl = ResolveVideoUrl(request.Input);
         if (string.IsNullOrWhiteSpace(targetUrl))
             return null;
 
         var info = await TryGetMediaInfoAsync(targetUrl, ct);
         if (!info.HasVideo)
-            throw new InvalidOperationException("yt-dlp extracted metadata for the URL, but did not find a video stream to map to a scene.");
+            throw new InvalidOperationException("yt-dlp extracted metadata for the URL, but did not find a video stream to map to a video.");
 
-        return info.SceneMetadata;
+        return info.VideoMetadata;
     }
 
     public interface IYtDlpCommandRunner
@@ -160,7 +160,7 @@ public sealed class YtDlpScraperExtension : IScraperProvider
                 hasVideo,
                 hasAudio,
                 ExtractAvailableHeights(root),
-                BuildSceneMetadata(root, normalizedUrl.Trim(), title.Trim(), string.IsNullOrWhiteSpace(mediaId) ? null : mediaId.Trim()));
+                BuildVideoMetadata(root, normalizedUrl.Trim(), title.Trim(), string.IsNullOrWhiteSpace(mediaId) ? null : mediaId.Trim()));
         }
         catch (JsonException ex)
         {
@@ -293,7 +293,7 @@ public sealed class YtDlpScraperExtension : IScraperProvider
         return (hasVideo, hasAudio);
     }
 
-    private static ScrapedSceneDto BuildSceneMetadata(JsonElement root, string normalizedUrl, string title, string? mediaId)
+    private static ScrapedVideoDto BuildVideoMetadata(JsonElement root, string normalizedUrl, string title, string? mediaId)
     {
         var performerNames = ExtractStringArray(root, "cast");
         AddIfPresent(performerNames, GetString(root, "uploader", "creator"));
@@ -302,7 +302,7 @@ public sealed class YtDlpScraperExtension : IScraperProvider
         if (tagNames.Count == 0)
             tagNames = ExtractStringArray(root, "categories");
 
-        return new ScrapedSceneDto
+        return new ScrapedVideoDto
         {
             Title = title,
             Code = mediaId,
@@ -316,7 +316,7 @@ public sealed class YtDlpScraperExtension : IScraperProvider
         };
     }
 
-    private static string? ResolveSceneUrl(SceneScrapeInput input)
+    private static string? ResolveVideoUrl(VideoScrapeInput input)
     {
         if (!string.IsNullOrWhiteSpace(input.Url) && OfficialDownloaderUtilities.IsHttpUrl(input.Url))
             return input.Url.Trim();
@@ -515,7 +515,7 @@ public sealed class YtDlpScraperExtension : IScraperProvider
         return new YtDlpCommandResult(process.ExitCode, (await stdoutTask).Trim(), (await stderrTask).Trim());
     }
 
-    private sealed record YtDlpMediaInfo(string NormalizedUrl, string Title, string? MediaId, bool HasVideo, bool HasAudio, IReadOnlyList<int> AvailableHeights, ScrapedSceneDto SceneMetadata);
+    private sealed record YtDlpMediaInfo(string NormalizedUrl, string Title, string? MediaId, bool HasVideo, bool HasAudio, IReadOnlyList<int> AvailableHeights, ScrapedVideoDto VideoMetadata);
 
     private sealed class ProcessYtDlpCommandRunner(YtDlpExecutableResolver executableResolver) : IYtDlpCommandRunner
     {

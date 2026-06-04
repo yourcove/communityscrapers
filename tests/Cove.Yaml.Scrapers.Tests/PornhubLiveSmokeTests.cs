@@ -9,10 +9,10 @@ namespace Cove.Yaml.Scrapers.Tests;
 public sealed class PornhubLiveSmokeTests
 {
     private const string LiveUrlEnvironmentVariable = "COVE_LIVE_PORNHUB_URL";
-    private const string SceneScraperId = "cove.community.scrapers.pornhub/scene";
+    private const string VideoScraperId = "cove.community.scrapers.pornhub/video";
 
     [Fact]
-    public async Task ScrapeSceneAsync_LivePornhubUrl_ReturnsPrimaryMetadata()
+    public async Task ScrapeVideoAsync_LivePornhubUrl_ReturnsPrimaryMetadata()
     {
         var url = Environment.GetEnvironmentVariable(LiveUrlEnvironmentVariable);
         if (string.IsNullOrWhiteSpace(url))
@@ -30,10 +30,10 @@ public sealed class PornhubLiveSmokeTests
         httpClient.DefaultRequestHeaders.Accept.ParseAdd("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
 
         var extension = CreateExtension(httpClient);
-        var result = await extension.ScrapeSceneAsync(
-            new ScraperRequest<SceneScrapeInput>(
-                SceneScraperId,
-                new SceneScrapeInput { Url = url },
+        var result = await extension.ScrapeVideoAsync(
+            new ScraperRequest<VideoScrapeInput>(
+                VideoScraperId,
+                new VideoScrapeInput { Url = url },
                 new ScraperPermissions()),
             CancellationToken.None);
 

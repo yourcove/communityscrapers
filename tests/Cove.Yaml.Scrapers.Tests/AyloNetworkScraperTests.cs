@@ -68,7 +68,7 @@ public sealed class AyloNetworkScraperTests
     });
 
     [Fact]
-    public async Task ScrapeSceneAsync_ParsesAyloSceneMetadata()
+    public async Task ScrapeVideoAsync_ParsesAyloVideoMetadata()
     {
         var extension = CreateExtension(new SeanCodyScraperExtension(), new Dictionary<string, FakeResponse>
         {
@@ -76,10 +76,10 @@ public sealed class AyloNetworkScraperTests
             [SceneApiUrl] = FakeResponse.Json(SceneJson),
         });
 
-        var result = await extension.ScrapeSceneAsync(
-            new ScraperRequest<SceneScrapeInput>(
-                "cove.community.scrapers.seancody/scene",
-                new SceneScrapeInput { Url = SceneUrl },
+        var result = await extension.ScrapeVideoAsync(
+            new ScraperRequest<VideoScrapeInput>(
+                "cove.community.scrapers.seancody/video",
+                new VideoScrapeInput { Url = SceneUrl },
                 new ScraperPermissions()),
             CancellationToken.None);
 
@@ -154,8 +154,8 @@ public sealed class AyloNetworkScraperTests
     public void AyloPorts_AdvertiseExpectedScrapers()
     {
         Assert.Equal(4, new BromoScraperExtension().GetScrapers().Count);
-        Assert.Contains(new BlackMaleMeScraperExtension().GetScrapers(), scraper => scraper.Id == "cove.community.scrapers.blackmaleme/scene");
-        Assert.Contains(new NextDoorHobbyScraperExtension().GetScrapers(), scraper => scraper.Id == "cove.community.scrapers.nextdoorhobby/scene");
+        Assert.Contains(new BlackMaleMeScraperExtension().GetScrapers(), scraper => scraper.Id == "cove.community.scrapers.blackmaleme/video");
+        Assert.Contains(new NextDoorHobbyScraperExtension().GetScrapers(), scraper => scraper.Id == "cove.community.scrapers.nextdoorhobby/video");
         Assert.Contains(new SeanCodyScraperExtension().GetScrapers(), scraper => scraper.Id == "cove.community.scrapers.seancody/performer");
         Assert.Contains(new Tube8VipScraperExtension().GetScrapers(), scraper => scraper.Id == "cove.community.scrapers.tube8vip/group");
         Assert.Contains(new WhyNotBiScraperExtension().GetScrapers(), scraper => scraper.Id == "cove.community.scrapers.whynotbi/group");

@@ -47,7 +47,7 @@ public abstract class AyloNetworkScraperBase : IScraperProvider
     private readonly string _siteDisplayName;
     private readonly string? _studioOverride;
     private readonly IReadOnlyList<string> _domains;
-    private readonly ScraperDescriptor _sceneScraper;
+    private readonly ScraperDescriptor _videoScraper;
     private readonly ScraperDescriptor _galleryScraper;
     private readonly ScraperDescriptor _performerScraper;
     private readonly ScraperDescriptor _groupScraper;
@@ -66,10 +66,10 @@ public abstract class AyloNetworkScraperBase : IScraperProvider
         _domains = domains;
         _studioOverride = studioOverride;
 
-        _sceneScraper = new ScraperDescriptor(
-            extensionId + "/scene",
-            siteDisplayName + " Scene",
-            ScraperEntity.Scene,
+        _videoScraper = new ScraperDescriptor(
+            extensionId + "/video",
+            siteDisplayName + " Video",
+            ScraperEntity.Video,
             ScraperCapabilities.ByUrl | ScraperCapabilities.ByName | ScraperCapabilities.ByFragment | ScraperCapabilities.ByQueryFragment,
             BuildSupportedUrls(domains, ["scene"]),
             ScraperRiskLevel.NetworkOnly,
@@ -119,11 +119,11 @@ public abstract class AyloNetworkScraperBase : IScraperProvider
         return Task.CompletedTask;
     }
 
-    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [_sceneScraper, _galleryScraper, _performerScraper, _groupScraper];
+    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [_videoScraper, _galleryScraper, _performerScraper, _groupScraper];
 
-    public async Task<ScrapedSceneDto?> ScrapeSceneAsync(ScraperRequest<SceneScrapeInput> request, CancellationToken ct)
+    public async Task<ScrapedVideoDto?> ScrapeVideoAsync(ScraperRequest<VideoScrapeInput> request, CancellationToken ct)
     {
-        if (!IsScraper(request.ScraperId, "scene"))
+        if (!IsScraper(request.ScraperId, "video"))
             return null;
 
         var url = FirstUrl(request.Input.Url, request.Input.Urls);
@@ -134,15 +134,15 @@ public abstract class AyloNetworkScraperBase : IScraperProvider
         if (GetJsonString(result, "type") != "scene" && TryGetObject(result, "parent", out var parent) && GetJsonString(parent, "type") == "scene")
             result = parent;
 
-        return ToScene(result);
+        return ToVideo(result);
     }
 
-    public async Task<IReadOnlyList<ScrapedSceneDto>> SearchScenesAsync(ScraperRequest<string> request, CancellationToken ct)
+    public async Task<IReadOnlyList<ScrapedVideoDto>> SearchVideosAsync(ScraperRequest<string> request, CancellationToken ct)
     {
-        if (!IsScraper(request.ScraperId, "scene") || string.IsNullOrWhiteSpace(request.Input))
+        if (!IsScraper(request.ScraperId, "video") || string.IsNullOrWhiteSpace(request.Input))
             return [];
 
-        var results = new List<ScrapedSceneDto>();
+        var results = new List<ScrapedVideoDto>();
         var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         foreach (var domain in _domains)
         {
@@ -160,9 +160,9 @@ public abstract class AyloNetworkScraperBase : IScraperProvider
                 if (string.IsNullOrWhiteSpace(id) || !seen.Add(id))
                     continue;
 
-                var scene = ToScene(item);
-                if (scene != null)
-                    results.Add(scene);
+                var video = ToVideo(item);
+                if (video != null)
+                    results.Add(video);
             }
 
             if (results.Count >= 10)
@@ -185,18 +185,18 @@ public abstract class AyloNetworkScraperBase : IScraperProvider
         if (GetJsonString(result, "type") != "scene" && TryGetObject(result, "parent", out var parent) && GetJsonString(parent, "type") == "scene")
             result = parent;
 
-        var scene = ToScene(result);
-        return scene == null ? null : new ScrapedGalleryDto
+        var video = ToVideo(result);
+        return video == null ? null : new ScrapedGalleryDto
         {
-            Title = scene.Title,
-            Code = scene.Code,
-            Date = scene.Date,
-            Details = scene.Details,
-            ImageUrl = scene.ImageUrl,
-            Urls = scene.Urls,
-            StudioName = scene.StudioName,
-            PerformerNames = scene.PerformerNames,
-            TagNames = scene.TagNames,
+            Title = video.Title,
+            Code = video.Code,
+            Date = video.Date,
+            Details = video.Details,
+            ImageUrl = video.ImageUrl,
+            Urls = video.Urls,
+            StudioName = video.StudioName,
+            PerformerNames = video.PerformerNames,
+            TagNames = video.TagNames,
         };
     }
 
@@ -315,15 +315,15 @@ public abstract class AyloNetworkScraperBase : IScraperProvider
         => _services?.GetRequiredService<IHttpClientFactory>().CreateClient(Id)
             ?? throw new InvalidOperationException("The Aylo scraper has not been initialized.");
 
-    private ScrapedSceneDto? ToScene(JsonElement scene)
+    private ScrapedVideoDto? ToVideo(JsonElement scene)
     {
         if (GetJsonString(scene, "type") != "scene")
             return null;
 
         var sourceUrl = ConstructReleaseUrl(scene);
-        return new ScrapedSceneDto
+        return new ScrapedVideoDto
         {
-            SourceScraperId = _sceneScraper.Id,
+            SourceScraperId = _videoScraper.Id,
             Title = GetJsonString(scene, "title"),
             Code = GetJsonString(scene, "id"),
             Date = ParseDate(GetJsonString(scene, "dateReleased")),

@@ -10,8 +10,8 @@ public sealed class RedditScraperExtension : IScraperProvider
     private const string ExtensionId = "cove.community.scrapers.reddit";
     private const string RedditImageScraperId = "cove.community.scrapers.reddit/scraper-image";
     private const string RedditAudioScraperId = "cove.community.scrapers.reddit/scraper-audio";
-    private const string RedditSceneScraperId = "cove.community.scrapers.reddit/scraper-scene";
-    private const string RedgifsSceneScraperId = "cove.community.scrapers.reddit/redgifs-scraper-scene";
+    private const string RedditVideoScraperId = "cove.community.scrapers.reddit/scraper-video";
+    private const string RedgifsVideoScraperId = "cove.community.scrapers.reddit/redgifs-scraper-video";
     private static readonly string[] RedditUrlPatterns = ["reddit.com/*", "*.reddit.com/*", "redd.it/*", "*.redd.it/*"];
     private static readonly string[] RedgifsUrlPatterns = ["redgifs.com/*", "*.redgifs.com/*", "redgif.com/*", "*.redgif.com/*"];
     private IServiceProvider? _services;
@@ -32,18 +32,18 @@ public sealed class RedditScraperExtension : IScraperProvider
         RedditUrlPatterns,
         ScraperRiskLevel.NetworkOnly);
 
-    private static readonly ScraperDescriptor RedditSceneScraper = new(
-        RedditSceneScraperId,
+    private static readonly ScraperDescriptor RedditVideoScraper = new(
+        RedditVideoScraperId,
         "Reddit Video Post",
-        ScraperEntity.Scene,
+        ScraperEntity.Video,
         ScraperCapabilities.ByUrl,
         RedditUrlPatterns,
         ScraperRiskLevel.NetworkOnly);
 
-    private static readonly ScraperDescriptor RedgifsSceneScraper = new(
-        RedgifsSceneScraperId,
+    private static readonly ScraperDescriptor RedgifsVideoScraper = new(
+        RedgifsVideoScraperId,
         "Redgifs Video",
-        ScraperEntity.Scene,
+        ScraperEntity.Video,
         ScraperCapabilities.ByUrl,
         RedgifsUrlPatterns,
         ScraperRiskLevel.NetworkOnly);
@@ -67,7 +67,7 @@ public sealed class RedditScraperExtension : IScraperProvider
         return Task.CompletedTask;
     }
 
-    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [RedditImageScraper, RedditAudioScraper, RedditSceneScraper, RedgifsSceneScraper];
+    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [RedditImageScraper, RedditAudioScraper, RedditVideoScraper, RedgifsVideoScraper];
 
     public async Task<ScrapedImageDto?> ScrapeImageAsync(ScraperRequest<ImageScrapeInput> request, CancellationToken ct)
     {
@@ -128,7 +128,7 @@ public sealed class RedditScraperExtension : IScraperProvider
         };
     }
 
-    public async Task<ScrapedSceneDto?> ScrapeSceneAsync(ScraperRequest<SceneScrapeInput> request, CancellationToken ct)
+    public async Task<ScrapedVideoDto?> ScrapeVideoAsync(ScraperRequest<VideoScrapeInput> request, CancellationToken ct)
     {
         var url = request.Input.Url ?? request.Input.Urls.FirstOrDefault();
         if (string.IsNullOrWhiteSpace(url))
@@ -139,7 +139,7 @@ public sealed class RedditScraperExtension : IScraperProvider
             var redgifs = await TryGetRedgifsInfoAsync(url, ct);
             return redgifs == null
                 ? null
-                : new ScrapedSceneDto
+                : new ScrapedVideoDto
                 {
                     Title = redgifs.Title,
                     Urls = redgifs.Urls,
@@ -159,7 +159,7 @@ public sealed class RedditScraperExtension : IScraperProvider
             .ToList();
 
         var redgifsUrls = post.LinkedUrls.Where(IsRedgifsUrl).ToList();
-        return new ScrapedSceneDto
+        return new ScrapedVideoDto
         {
             Title = post.Title,
             Details = post.Details,

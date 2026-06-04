@@ -34,7 +34,7 @@ public sealed class FakNetworkScraperTests
     });
 
     [Fact]
-    public async Task ScrapeSceneAsync_ParsesFakNetworkSceneMetadata()
+    public async Task ScrapeVideoAsync_ParsesFakNetworkVideoMetadata()
     {
         var extension = CreateExtension(new FaKingsScraperExtension(), new Dictionary<string, string>
         {
@@ -42,10 +42,10 @@ public sealed class FakNetworkScraperTests
             [CategoriesApiUrl] = CategoriesJson,
         });
 
-        var result = await extension.ScrapeSceneAsync(
-            new ScraperRequest<SceneScrapeInput>(
-                "cove.community.scrapers.fakings/scene",
-                new SceneScrapeInput { Url = SceneUrl },
+        var result = await extension.ScrapeVideoAsync(
+            new ScraperRequest<VideoScrapeInput>(
+                "cove.community.scrapers.fakings/video",
+                new VideoScrapeInput { Url = SceneUrl },
                 new ScraperPermissions()),
             CancellationToken.None);
 
@@ -62,7 +62,7 @@ public sealed class FakNetworkScraperTests
     }
 
     [Fact]
-    public async Task SearchScenesAsync_UsesFakNetworkSearchApi()
+    public async Task SearchVideosAsync_UsesFakNetworkSearchApi()
     {
         var extension = CreateExtension(new FaKingsScraperExtension(), new Dictionary<string, string>
         {
@@ -70,8 +70,8 @@ public sealed class FakNetworkScraperTests
             [CategoriesApiUrl] = CategoriesJson,
         });
 
-        var results = await extension.SearchScenesAsync(
-            new ScraperRequest<string>("cove.community.scrapers.fakings/scene", "fixture", new ScraperPermissions()),
+        var results = await extension.SearchVideosAsync(
+            new ScraperRequest<string>("cove.community.scrapers.fakings/video", "fixture", new ScraperPermissions()),
             CancellationToken.None);
 
         var result = Assert.Single(results);
@@ -80,19 +80,19 @@ public sealed class FakNetworkScraperTests
     }
 
     [Fact]
-    public void FakNetworkPorts_AdvertiseExpectedSceneScrapers()
+    public void FakNetworkPorts_AdvertiseExpectedVideoScrapers()
     {
-        AssertSceneScraper(new FaKingsScraperExtension(), "cove.community.scrapers.fakings/scene", "FaKings Scene");
-        AssertSceneScraper(new MadLifesScraperExtension(), "cove.community.scrapers.madlifes/scene", "MadLifes Scene");
-        AssertSceneScraper(new PepePornScraperExtension(), "cove.community.scrapers.pepeporn/scene", "PepePorn Scene");
+        AssertVideoScraper(new FaKingsScraperExtension(), "cove.community.scrapers.fakings/video", "FaKings Video");
+        AssertVideoScraper(new MadLifesScraperExtension(), "cove.community.scrapers.madlifes/video", "MadLifes Video");
+        AssertVideoScraper(new PepePornScraperExtension(), "cove.community.scrapers.pepeporn/video", "PepePorn Video");
     }
 
-    private static void AssertSceneScraper(IScraperProvider extension, string scraperId, string scraperName)
+    private static void AssertVideoScraper(IScraperProvider extension, string scraperId, string scraperName)
     {
         var scraper = Assert.Single(extension.GetScrapers());
         Assert.Equal(scraperId, scraper.Id);
         Assert.Equal(scraperName, scraper.Name);
-        Assert.Equal(ScraperEntity.Scene, scraper.Entity);
+        Assert.Equal(ScraperEntity.Video, scraper.Entity);
         Assert.True(scraper.Capabilities.HasFlag(ScraperCapabilities.ByUrl));
         Assert.True(scraper.Capabilities.HasFlag(ScraperCapabilities.ByName));
     }

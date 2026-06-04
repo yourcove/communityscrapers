@@ -61,22 +61,22 @@ public sealed class PornhubScraperTests
 
         var scrapers = extension.GetScrapers();
 
-        Assert.Contains(scrapers, scraper => scraper.Id == "cove.community.scrapers.pornhub/scene");
+        Assert.Contains(scrapers, scraper => scraper.Id == "cove.community.scrapers.pornhub/video");
         Assert.Contains(scrapers, scraper => scraper.Id == "cove.community.scrapers.pornhub/performer");
     }
 
     [Fact]
-    public async Task ScrapeSceneAsync_ParsesSceneMetadata()
+    public async Task ScrapeVideoAsync_ParsesVideoMetadata()
     {
         var extension = CreateExtension(new Dictionary<string, string>
         {
             [SceneUrl] = SceneHtml,
         });
 
-        var result = await extension.ScrapeSceneAsync(
-            new ScraperRequest<SceneScrapeInput>(
-                "cove.community.scrapers.pornhub/scene",
-                new SceneScrapeInput { Url = SceneUrl },
+        var result = await extension.ScrapeVideoAsync(
+            new ScraperRequest<VideoScrapeInput>(
+                "cove.community.scrapers.pornhub/video",
+                new VideoScrapeInput { Url = SceneUrl },
                 new ScraperPermissions()),
             CancellationToken.None);
 

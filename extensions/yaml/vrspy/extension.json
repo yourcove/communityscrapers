@@ -5,7 +5,7 @@
   "description": "YAML metadata scraper for VRSpy.",
   "url": "https://github.com/yourcove/communityscrapers",
   "kind": "scraper-pack",
-  "minCoveVersion": "0.0.28",
+  "minCoveVersion": "0.0.32",
   "categories": [
     "scraper",
     "metadata",

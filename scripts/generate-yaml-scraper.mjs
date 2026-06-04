@@ -21,10 +21,28 @@ import process from "node:process";
 
 const root = path.resolve(import.meta.dirname, "..");
 const yamlRoot = path.join(root, "extensions", "yaml");
+const buildPropsPath = path.join(root, "Directory.Build.props");
 
 const ID_PREFIX = "cove.community.scrapers.yaml.";
 const UPSTREAM_TREE = "https://github.com/stashapp/CommunityScrapers/tree/master";
 const SUPPORTED_POST_PROCESS_STEPS = new Set(["replace", "parsedate", "map", "feettocm", "lbtokg"]);
+
+function readMsBuildProperties(filePath) {
+  if (!fs.existsSync(filePath)) return {};
+
+  const props = {};
+  const content = fs.readFileSync(filePath, "utf8");
+  const pattern = /<([A-Za-z_][A-Za-z0-9_.-]*)(?:\s+[^>]*)?>([^<]*)<\/\1>/g;
+  for (const match of content.matchAll(pattern)) {
+    const [, name, rawValue] = match;
+    const value = rawValue.trim().replace(/\$\(([^)]+)\)/g, (_, propertyName) => props[propertyName] ?? `$(${propertyName})`);
+    props[name] = value;
+  }
+
+  return props;
+}
+
+const COVE_MIN_VERSION = readMsBuildProperties(buildPropsPath).CoveMinVersion ?? "0.0.32";
 
 function parseArgs(argv) {
   const files = [];
@@ -231,7 +249,7 @@ function generate(upstreamPath, opts) {
     description: `YAML metadata scraper for ${name}.`,
     url: "https://github.com/yourcove/communityscrapers",
     kind: "scraper-pack",
-    minCoveVersion: "0.0.16",
+    minCoveVersion: COVE_MIN_VERSION,
     categories: ["scraper", "metadata", "yaml-scraper"],
     scraperFiles: [`scrapers/${id}.yml`],
   };

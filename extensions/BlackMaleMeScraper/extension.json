@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Extracts scene, performer, gallery, and group metadata from Black Male Me pages.",
   "url": "https://github.com/yourcove/communityscrapers",
-  "minCoveVersion": "0.0.28",
+  "minCoveVersion": "0.0.32",
   "entryDll": "BlackMaleMeScraper.dll",
   "categories": [
     "scraper",

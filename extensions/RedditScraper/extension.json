@@ -5,7 +5,7 @@
   "description": "Extracts metadata from Reddit posts and Redgifs links.",
   "author": "Cove Team",
   "url": "https://github.com/yourcove/communityscrapers",
-  "minCoveVersion": "0.0.28",
+  "minCoveVersion": "0.0.32",
   "entryDll": "RedditScraper.dll",
   "categories": [
     "scraper",

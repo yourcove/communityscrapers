@@ -53,7 +53,7 @@ public class XvideosScraperTests
     {
         var service = CreateService();
 
-        var matches = service.FindScrapersForUrl(SceneUrl, "scene");
+        var matches = service.FindScrapersForUrl(SceneUrl, "video");
 
         Assert.Contains(matches, m => m.Name.Equals("Xvideos", StringComparison.OrdinalIgnoreCase));
     }
@@ -66,7 +66,7 @@ public class XvideosScraperTests
             [SceneUrl] = SceneHtml,
         });
 
-        var result = await service.ScrapeUrlAutoAsync(SceneUrl, "scene");
+        var result = await service.ScrapeUrlAutoAsync(SceneUrl, "video");
 
         Assert.NotNull(result);
         Assert.Equal("Test Scene Title", GetString(result!.Value.Result, "Title"));

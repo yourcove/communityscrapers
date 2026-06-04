@@ -16,28 +16,28 @@ public abstract class FakNetworkScraperBase : IScraperProvider
     private static readonly string[] Languages = ["en", "es", "pt"];
 
     private readonly string _extensionId;
-    private readonly string _sceneScraperId;
+    private readonly string _videoScraperId;
     private readonly string _extensionName;
     private readonly string _siteKey;
     private readonly string _siteDisplayName;
     private readonly string _siteHost;
-    private readonly ScraperDescriptor _sceneScraper;
+    private readonly ScraperDescriptor _videoScraper;
     private IServiceProvider? _services;
 
     protected FakNetworkScraperBase(string extensionId, string extensionName, string siteKey, string siteDisplayName)
     {
         _extensionId = extensionId;
-        _sceneScraperId = extensionId + "/scene";
+        _videoScraperId = extensionId + "/video";
         _extensionName = extensionName;
         _siteKey = siteKey;
         _siteDisplayName = siteDisplayName;
         _siteHost = siteKey + ".com";
 
         var supportedUrls = BuildSupportedUrls(_siteHost);
-        _sceneScraper = new ScraperDescriptor(
-            _sceneScraperId,
-            siteDisplayName + " Scene",
-            ScraperEntity.Scene,
+        _videoScraper = new ScraperDescriptor(
+            _videoScraperId,
+            siteDisplayName + " Video",
+            ScraperEntity.Video,
             ScraperCapabilities.ByUrl | ScraperCapabilities.ByName | ScraperCapabilities.ByFragment | ScraperCapabilities.ByQueryFragment,
             supportedUrls,
             ScraperRiskLevel.NetworkOnly,
@@ -63,11 +63,11 @@ public abstract class FakNetworkScraperBase : IScraperProvider
         return Task.CompletedTask;
     }
 
-    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [_sceneScraper];
+    public IReadOnlyList<ScraperDescriptor> GetScrapers() => [_videoScraper];
 
-    public async Task<ScrapedSceneDto?> ScrapeSceneAsync(ScraperRequest<SceneScrapeInput> request, CancellationToken ct)
+    public async Task<ScrapedVideoDto?> ScrapeVideoAsync(ScraperRequest<VideoScrapeInput> request, CancellationToken ct)
     {
-        if (!string.Equals(request.ScraperId, _sceneScraperId, StringComparison.OrdinalIgnoreCase))
+        if (!string.Equals(request.ScraperId, _videoScraperId, StringComparison.OrdinalIgnoreCase))
             return null;
 
         var lookup = ResolveSceneLookup(request.Input);
@@ -77,9 +77,9 @@ public abstract class FakNetworkScraperBase : IScraperProvider
         return await FetchSceneAsync(lookup.Value.Slug, lookup.Value.Language, ct);
     }
 
-    public async Task<IReadOnlyList<ScrapedSceneDto>> SearchScenesAsync(ScraperRequest<string> request, CancellationToken ct)
+    public async Task<IReadOnlyList<ScrapedVideoDto>> SearchVideosAsync(ScraperRequest<string> request, CancellationToken ct)
     {
-        if (!string.Equals(request.ScraperId, _sceneScraperId, StringComparison.OrdinalIgnoreCase) || string.IsNullOrWhiteSpace(request.Input))
+        if (!string.Equals(request.ScraperId, _videoScraperId, StringComparison.OrdinalIgnoreCase) || string.IsNullOrWhiteSpace(request.Input))
             return [];
 
         var apiUrl = "https://api.faknetworks.com/v1/search"
@@ -91,7 +91,7 @@ public abstract class FakNetworkScraperBase : IScraperProvider
         if (!document.RootElement.TryGetProperty("videos", out var videos) || videos.ValueKind != JsonValueKind.Array)
             return [];
 
-        var results = new List<ScrapedSceneDto>();
+        var results = new List<ScrapedVideoDto>();
         foreach (var video in videos.EnumerateArray())
         {
             var scene = await ConvertSceneAsync(video, "en", ct);
@@ -102,7 +102,7 @@ public abstract class FakNetworkScraperBase : IScraperProvider
         return results;
     }
 
-    private async Task<ScrapedSceneDto?> FetchSceneAsync(string slug, string language, CancellationToken ct)
+    private async Task<ScrapedVideoDto?> FetchSceneAsync(string slug, string language, CancellationToken ct)
     {
         var apiUrl = $"https://api.faknetworks.com/v1/public/videos/{Uri.EscapeDataString(slug)}?lang={Uri.EscapeDataString(language)}";
         var json = await GetStringAsync(apiUrl, ct);
@@ -111,7 +111,7 @@ public abstract class FakNetworkScraperBase : IScraperProvider
         return await ConvertSceneAsync(document.RootElement, language, ct);
     }
 
-    private async Task<ScrapedSceneDto?> ConvertSceneAsync(JsonElement data, string fallbackLanguage, CancellationToken ct)
+    private async Task<ScrapedVideoDto?> ConvertSceneAsync(JsonElement data, string fallbackLanguage, CancellationToken ct)
     {
         var title = GetJsonString(data, "title");
         var slug = GetJsonString(data, "slug");
@@ -122,9 +122,9 @@ public abstract class FakNetworkScraperBase : IScraperProvider
         if (string.IsNullOrWhiteSpace(title) && string.IsNullOrWhiteSpace(slug))
             return null;
 
-        return new ScrapedSceneDto
+        return new ScrapedVideoDto
         {
-            SourceScraperId = _sceneScraperId,
+            SourceScraperId = _videoScraperId,
             Title = title,
             Date = ParseDate(GetJsonString(data, "date")),
             Code = GetJsonString(data, "filename") ?? slug,
@@ -165,7 +165,7 @@ public abstract class FakNetworkScraperBase : IScraperProvider
         }
     }
 
-    private SceneLookup? ResolveSceneLookup(SceneScrapeInput input)
+    private SceneLookup? ResolveSceneLookup(VideoScrapeInput input)
     {
         var directUrl = TryParseSceneUrl(input.Url);
         if (directUrl != null)
