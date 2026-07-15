@@ -1,7 +1,7 @@
 {
   "id": "cove.community.scrapers.pornhub",
   "name": "Pornhub Scraper",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Extracts scene and performer metadata from Pornhub pages.",
   "url": "https://github.com/yourcove/communityscrapers",
   "minCoveVersion": "0.0.32",
