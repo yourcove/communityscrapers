@@ -99,7 +99,7 @@
       "tagPrefix": "ytdlp/"
     },
     {
-      "name": "MissAv",
+      "name": "MissAvScraper",
       "id": "cove.community.scrapers.missav",
       "path": "extensions/MissAvScraper",
       "tagPrefix": "missav/"
