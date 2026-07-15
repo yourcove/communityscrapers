@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <CoveMinVersion Condition="'$(CoveMinVersion)' == ''">0.0.32</CoveMinVersion>
+    <CovePluginsVersion Condition="'$(CovePluginsVersion)' == ''">$(CoveMinVersion)</CovePluginsVersion>
+    <CoveCoreVersion Condition="'$(CoveCoreVersion)' == ''">$(CoveMinVersion)</CoveCoreVersion>
+    <UseLocalCovePlugins Condition="'$(UseLocalCovePlugins)' == ''">false</UseLocalCovePlugins>
+    <UseLocalCoveCore Condition="'$(UseLocalCoveCore)' == ''">false</UseLocalCoveCore>
+  </PropertyGroup>
+  <ItemGroup><FrameworkReference Include="Microsoft.AspNetCore.App" /></ItemGroup>
+  <ItemGroup>
+    <None Include="extension.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Always" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(UseLocalCovePlugins)' == 'false'"><PackageReference Include="Cove.Plugins" Version="$(CovePluginsVersion)" /></ItemGroup>
+  <ItemGroup Condition="'$(UseLocalCoveCore)' == 'false'"><PackageReference Include="Cove.Core" Version="$(CoveCoreVersion)" /></ItemGroup>
+  <ItemGroup Condition="'$(UseLocalCovePlugins)' == 'true'"><ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\cove\src\Cove.Plugins\Cove.Plugins.csproj" Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\cove\src\Cove.Plugins\Cove.Plugins.csproj')"><Private>false</Private><ExcludeAssets>runtime</ExcludeAssets></ProjectReference></ItemGroup>
+  <ItemGroup Condition="'$(UseLocalCoveCore)' == 'true'"><ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\cove\src\Cove.Core\Cove.Core.csproj" Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\cove\src\Cove.Core\Cove.Core.csproj')"><Private>false</Private><ExcludeAssets>runtime</ExcludeAssets></ProjectReference></ItemGroup>
+</Project>
