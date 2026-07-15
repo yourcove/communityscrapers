@@ -5,7 +5,7 @@
   "description": "Extracts scene metadata from MissAV/123AV pages.",
   "url": "https://github.com/yourcove/communityscrapers",
   "minCoveVersion": "0.0.32",
-  "entryDll": "MissAV123Scraper.dll",
+  "entryDll": "MissAVScraper.dll",
   "categories": [
     "scraper",
     "metadata",
