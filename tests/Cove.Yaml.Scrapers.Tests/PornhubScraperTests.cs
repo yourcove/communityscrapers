@@ -54,6 +54,39 @@ public sealed class PornhubScraperTests
         </html>
         """;
 
+    // Mirrors the pornhub search-results markup: each result is a <li> whose thumbnail anchor wraps the
+    // preview <img> (carrying the cover in data-image, plus a data-mediabook webm we must ignore), and a
+    // separate title anchor pointing at the same viewkey.
+    private static readonly string SearchHtml = """
+        <html><body>
+          <ul id="videoSearchResult">
+            <li class="pcVideoListItem" data-video-vkey="aaa111">
+              <div class="phimage">
+                <a href="/view_video.php?viewkey=aaa111" title="First Result Title" class="img">
+                  <img src="https://ei.example.invalid/aaa111.jpg" alt="First Result Title"
+                       data-image="https://ei.example.invalid/aaa111.jpg"
+                       data-mediabook="https://ei.example.invalid/aaa111.webm" />
+                </a>
+              </div>
+              <div class="thumbnail-info-wrapper">
+                <span class="title"><a href="/view_video.php?viewkey=aaa111" title="First Result Title">First Result Title</a></span>
+              </div>
+            </li>
+            <li class="pcVideoListItem" data-video-vkey="bbb222">
+              <div class="phimage">
+                <a href="/view_video.php?viewkey=bbb222" title="Second Result Title" class="img">
+                  <img src="https://ei.example.invalid/bbb222.jpg" alt="Second Result Title"
+                       data-image="https://ei.example.invalid/bbb222.jpg" />
+                </a>
+              </div>
+              <div class="thumbnail-info-wrapper">
+                <span class="title"><a href="/view_video.php?viewkey=bbb222" title="Second Result Title">Second Result Title</a></span>
+              </div>
+            </li>
+          </ul>
+        </body></html>
+        """;
+
     [Fact]
     public void PornhubScraper_AdvertisesSceneAndPerformerScrapers()
     {
@@ -89,6 +122,30 @@ public sealed class PornhubScraperTests
         Assert.Contains("Example Model", result.PerformerNames);
         Assert.Contains("Category One", result.TagNames);
         Assert.Contains("Tag One", result.TagNames);
+    }
+
+    [Fact]
+    public async Task SearchVideosAsync_ReturnsResultsWithThumbnails()
+    {
+        var extension = CreateExtension(new Dictionary<string, string>
+        {
+            ["https://www.pornhub.com/video/search?search=night"] = SearchHtml,
+        });
+
+        var results = await extension.SearchVideosAsync(
+            new ScraperRequest<string>("cove.community.scrapers.pornhub/video", "night", new ScraperPermissions()),
+            CancellationToken.None);
+
+        Assert.Equal(2, results.Count);
+
+        Assert.Equal("First Result Title", results[0].Title);
+        Assert.Equal("aaa111", results[0].Code);
+        Assert.Equal("https://www.pornhub.com/view_video.php?viewkey=aaa111", Assert.Single(results[0].Urls));
+        // The cover comes from the thumbnail img's data-image, not the data-mediabook webm preview.
+        Assert.Equal("https://ei.example.invalid/aaa111.jpg", results[0].ImageUrl);
+
+        Assert.Equal("Second Result Title", results[1].Title);
+        Assert.Equal("https://ei.example.invalid/bbb222.jpg", results[1].ImageUrl);
     }
 
     [Fact]

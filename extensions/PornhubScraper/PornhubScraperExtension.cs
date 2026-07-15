@@ -167,26 +167,108 @@ public sealed class PornhubScraperExtension : IScraperProvider
 
     private static IReadOnlyList<ScrapedVideoDto> ParseVideoSearch(string html)
     {
-        var results = new List<ScrapedVideoDto>();
-        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        foreach (Match match in Regex.Matches(html, @"(?is)<a\b[^>]*href\s*=\s*(['""'])(?<href>[^'""#]*view_video\.php\?viewkey=[^'""]+)\1[^>]*>(?<text>.*?)</a>"))
+        // Each search result links to the same video through several anchors: a thumbnail anchor that
+        // wraps the preview <img> (and a duration overlay like "9:51"), and a separate title anchor
+        // carrying the real title. Using the first anchor's inner text (as before) picked up the
+        // duration. Instead, prefer the anchor's title= attribute, fall back to inner text, reject
+        // duration-only strings, and upgrade the stored title if a better anchor for the same video
+        // appears later in the markup. The thumbnail anchor's inner <img> also gives us the cover image.
+        var titlesByUrl = new Dictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
+        var imagesByUrl = new Dictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
+        var order = new List<string>();
+
+        foreach (Match match in Regex.Matches(html, @"(?is)<a\b(?<attrs>[^>]*)>(?<text>.*?)</a>"))
         {
-            var url = ToAbsolutePornhubUrl(match.Groups["href"].Value);
-            if (string.IsNullOrWhiteSpace(url) || !seen.Add(url))
+            var attrs = match.Groups["attrs"].Value;
+            var href = ExtractAttribute(attrs, "href");
+            if (href is null || !href.Contains("view_video.php?viewkey=", StringComparison.OrdinalIgnoreCase))
                 continue;
 
-            var title = CleanHtml(match.Groups["text"].Value);
-            results.Add(new ScrapedVideoDto
+            var url = ToAbsolutePornhubUrl(href);
+            if (string.IsNullOrWhiteSpace(url))
+                continue;
+
+            var title = FirstUsableTitle(
+                CleanHtml(ExtractAttribute(attrs, "title") ?? string.Empty),
+                CleanHtml(match.Groups["text"].Value));
+            var image = ExtractSearchThumbnail(match.Groups["text"].Value);
+
+            if (!titlesByUrl.TryGetValue(url, out var existingTitle))
             {
-                SourceScraperId = VideoScraperId,
-                Title = string.IsNullOrWhiteSpace(title) ? OfficialDownloaderUtilities.DeriveTitleFromUrl(url, "Pornhub scene") : title,
-                Urls = [url],
-                Code = ExtractViewKey(url),
-            });
+                order.Add(url);
+                titlesByUrl[url] = title;
+                imagesByUrl[url] = image;
+            }
+            else
+            {
+                if (existingTitle is null && title is not null)
+                    titlesByUrl[url] = title;
+                // The image lives on the thumbnail anchor, which may appear before or after the title
+                // anchor; keep the first non-empty one we find for this video.
+                if (string.IsNullOrWhiteSpace(imagesByUrl[url]) && image is not null)
+                    imagesByUrl[url] = image;
+            }
         }
 
-        return results;
+        return order
+            .Select(url => new ScrapedVideoDto
+            {
+                SourceScraperId = VideoScraperId,
+                Title = titlesByUrl[url] ?? OfficialDownloaderUtilities.DeriveTitleFromUrl(url, "Pornhub scene"),
+                Urls = [url],
+                Code = ExtractViewKey(url),
+                ImageUrl = imagesByUrl[url],
+            })
+            .ToList();
     }
+
+    // The search-result thumbnail anchor wraps an <img> whose full-size preview is in data-image
+    // (mirrored by src); data-mediumthumb / data-thumb_url are older fallbacks. data-mediabook is a
+    // webm preview, not an image, so it is intentionally excluded. Returns the first absolute http(s)
+    // URL found, ignoring inline data: placeholders.
+    private static string? ExtractSearchThumbnail(string anchorInner)
+    {
+        var imgMatch = Regex.Match(anchorInner, @"(?is)<img\b[^>]*>");
+        if (!imgMatch.Success)
+            return null;
+
+        var imgTag = imgMatch.Value;
+        foreach (var attribute in new[] { "data-image", "data-mediumthumb", "data-thumb_url", "src" })
+        {
+            var value = ExtractAttribute(imgTag, attribute);
+            if (string.IsNullOrWhiteSpace(value))
+                continue;
+
+            var decoded = WebUtility.HtmlDecode(value).Trim();
+            if (decoded.StartsWith("http://", StringComparison.OrdinalIgnoreCase)
+                || decoded.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+                return decoded;
+        }
+
+        return null;
+    }
+
+    // Returns the first candidate that is a real title (non-empty and not just a duration like "9:51"),
+    // or null when none qualify so the caller can derive a title from the URL instead.
+    private static string? FirstUsableTitle(params string?[] candidates)
+    {
+        foreach (var candidate in candidates)
+        {
+            if (string.IsNullOrWhiteSpace(candidate))
+                continue;
+
+            var trimmed = candidate.Trim();
+            if (IsDurationOnly(trimmed))
+                continue;
+
+            return trimmed;
+        }
+
+        return null;
+    }
+
+    private static bool IsDurationOnly(string text)
+        => Regex.IsMatch(text, @"^\d{1,2}:\d{2}(:\d{2})?$");
 
     private static ScrapedPerformerDto? ParsePerformer(string html, string fallbackUrl)
     {
