@@ -1,0 +1,22 @@
+{
+  "id": "cove.community.scrapers.missav",
+  "name": "MissAV123 Scraper",
+  "version": "1.0.0",
+  "description": "Extracts scene metadata from MissAV/123AV pages.",
+  "url": "https://github.com/yourcove/communityscrapers",
+  "minCoveVersion": "0.0.32",
+  "entryDll": "MissAV123Scraper.dll",
+  "categories": [
+    "scraper",
+    "metadata",
+    "video"
+  ],
+  "permissions": {
+    "network": [
+      "missav123.to",
+      "*.missav123.to",
+      "123av.com",
+      "*.123av.com"
+    ]
+  }
+}
