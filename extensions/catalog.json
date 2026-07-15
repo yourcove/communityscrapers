@@ -97,6 +97,12 @@
       "id": "cove.community.scrapers.ytdlp",
       "path": "extensions/YtDlpScraper",
       "tagPrefix": "ytdlp/"
+    },
+    {
+      "name": "MissAv",
+      "id": "cove.community.scrapers.missav",
+      "path": "extensions/MissAvScraper",
+      "tagPrefix": "missav/"
     }
   ]
 }
